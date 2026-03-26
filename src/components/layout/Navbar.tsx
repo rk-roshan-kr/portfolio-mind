@@ -86,14 +86,17 @@ export const Navbar = () => {
       <div className="flex-1 flex items-center justify-end gap-3 md:gap-6 text-[10px]">
         {/* Navigation Links */}
         <div className="flex items-center gap-2 sm:gap-4 text-white/40 tracking-tighter">
-          <a href="https://github.com/rk-roshan-kr" target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition-colors tracking-widest hidden sm:block">[ REPOS ]</a>
+          <a href="https://github.com/rk-roshan-kr" target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition-colors tracking-widest">
+            <span className="hidden sm:inline">[ REPO ]</span>
+            <span className="sm:hidden text-[9px]">REPO</span>
+          </a>
           <a href="/papers" className={`transition-colors tracking-widest ${pathname === '/papers' ? 'text-cyan-400 font-bold' : 'hover:text-cyan-400'}`}>
-            <span className="hidden sm:inline">[ PAPERS ]</span>
-            <span className="sm:hidden text-[9px]">PAPERS</span>
+            <span className="hidden sm:inline">[ PAPER ]</span>
+            <span className="sm:hidden text-[9px]">PAPER</span>
           </a>
           <a href="/logs" className={`transition-colors tracking-widest ${pathname === '/logs' ? 'text-cyan-400 font-bold' : 'hover:text-cyan-400'}`}>
-            <span className="hidden sm:inline">[ LOGS ]</span>
-            <span className="sm:hidden text-[9px]">LOGS</span>
+            <span className="hidden sm:inline">[ LOG ]</span>
+            <span className="sm:hidden text-[9px]">LOG</span>
           </a>
         </div>
 
