@@ -105,7 +105,7 @@ export const Navbar = () => {
           <a href="https://linkedin.com/in/roshankumargupta-0xc0de" target="_blank" rel="noreferrer" className="opacity-30 hover:opacity-100 hover:text-cyan-400 transition-all">
             <Linkedin size={14} />
           </a>
-          <div className="relative group/mail">
+          <div className="relative group/mail flex items-center">
             <button 
               onClick={() => {
                 navigator.clipboard.writeText('roshankumargupta.sh@gmail.com');
@@ -113,9 +113,13 @@ export const Navbar = () => {
                 setTimeout(() => setCopied(false), 2000);
                 window.location.href = 'mailto:roshankumargupta.sh@gmail.com';
               }}
-              className="opacity-30 hover:opacity-100 hover:text-cyan-400 transition-all cursor-pointer p-1"
+              className="opacity-30 hover:opacity-100 hover:text-cyan-400 transition-all cursor-pointer p-1 flex items-center gap-2"
             >
-              <Mail size={14} />
+              {copied ? (
+                <span className="text-[9px] text-cyan-400 font-bold animate-pulse">[ COPIED ]</span>
+              ) : (
+                <Mail size={14} />
+              )}
             </button>
           </div>
         </div>
