@@ -1,0 +1,900 @@
+{
+  "nodes": [
+    {
+      "id": "core",
+      "title": "Roshan Kumar Gupta",
+      "type": "project",
+      "level": 0,
+      "parentId": null,
+      "description": "Research Engineer and Systems Architect specializing in High-Performance Computing (HPC), GPU acceleration (C++/CUDA), and Physics-Constrained Machine Learning. Currently targeting Developer Technology Engineer roles.",
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "cat_edu",
+      "title": "Education & Identity",
+      "type": "project",
+      "level": 1,
+      "parentId": "core",
+      "description": "Academic background and core identity. Balancing formal B.Tech Computer Science coursework with independent, grant-funded systems research.",
+      "position": [
+        3.464101615137755,
+        3.464101615137755,
+        3.464101615137755
+      ]
+    },
+    {
+      "id": "cat_exp",
+      "title": "Experience & Milestones",
+      "type": "project",
+      "level": 1,
+      "parentId": "core",
+      "description": "Key career milestones, internships, and awards. Highlights include securing venture funding, enterprise IT experience, and winning national hackathons.",
+      "position": [
+        -3.464101615137755,
+        -3.464101615137755,
+        3.464101615137755
+      ]
+    },
+    {
+      "id": "cat_proj",
+      "title": "Architectural Projects",
+      "type": "project",
+      "level": 1,
+      "parentId": "core",
+      "description": "Flagship engineering projects spanning GPU-accelerated storage, quantum computing research, and physics-constrained deep learning pipelines.",
+      "position": [
+        -3.464101615137755,
+        3.464101615137755,
+        -3.464101615137755
+      ]
+    },
+    {
+      "id": "cat_skills",
+      "title": "Core Technical Skills",
+      "type": "project",
+      "level": 1,
+      "parentId": "core",
+      "description": "Core technical stack and competencies. Focused on low-level systems programming, AI infrastructure, and 3D web architecture.",
+      "position": [
+        3.464101615137755,
+        -3.464101615137755,
+        -3.464101615137755
+      ]
+    },
+    {
+      "id": "proj_fieldchain",
+      "title": "FieldChain GPU Storage",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_proj",
+      "description": "A GPU-accelerated storage integrity system for NVMe arrays. Uses custom CUDA/Vulkan kernels to validate cryptographic data at 166.86 GiB/s, bypassing CPU bottlenecks.",
+      "links": [
+        { "label": "GITHUB_REPOS", "url": "https://github.com/rk-roshan-kr/FieldChain" }
+      ],
+      "position": [
+        -4.609326316431508,
+        12.290576418298365,
+        -2.129259702131759
+      ]
+    },
+    {
+      "id": "proj_roshan_arch",
+      "title": "Roshan Architecture",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_proj",
+      "description": "A deterministic memory framework and architectural philosophy focused on hardware constraints, memory-aligned execution, and Small Form Factor (SFF) workstation optimization.",
+      "position": [
+        -4.897365084416144,
+        12.197213718369444,
+        -5.1007166645676
+      ]
+    },
+    {
+      "id": "proj_tars",
+      "title": "Project TARS API",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_proj",
+      "description": "A physics-constrained machine learning pipeline that processes NASA TESS data to discover exoplanets. Funded by a $5,500 grant from Emergent Ventures.",
+      "links": [
+        { "label": "GITHUB_REPOS", "url": "https://github.com/rk-roshan-kr/Tars" }
+      ],
+      "position": [
+        -6.224144381871175,
+        0.6746656303236991,
+        -11.563559054523862
+      ]
+    },
+    {
+      "id": "proj_quanta",
+      "title": "QUANTA Thesis",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_proj",
+      "description": "Research initiative and paper defining an experimental law for the signal-to-noise limit of qubits in quantum computing. Drafted under academic mentorship.",
+      "position": [
+        -11.919990637441414,
+        4.937188324078005,
+        -6.174426239027718
+      ]
+    },
+    {
+      "id": "proj_cryptic",
+      "title": "Cryptic DAO Dashboard",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_proj",
+      "description": "A decentralized Web3 Treasury and DeFi Investment Manager. Won the ZeroToOne Hackathon by providing a seamless UI for managing decentralized assets.",
+      "links": [
+        { "label": "LIVE_DEPLOY", "url": "https://cryptic-webapp.netlify.app" },
+        { "label": "GITHUB_REPOS", "url": "https://github.com/rk-roshan-kr/dao-treasury-dashboard" }
+      ],
+      "position": [
+        -10.306595557500616,
+        9.156735577914903,
+        -2.132112420525542
+      ]
+    },
+    {
+      "id": "proj_safety",
+      "title": "Safety Pod App",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_proj",
+      "description": "A mobile-first ecosystem concept designed for personal security, utilizing low-latency signaling and real-time routing algorithms.",
+      "position": [
+        -10.774972931451797,
+        6.522045196896527,
+        -7.732361778660265
+      ]
+    },
+    {
+      "id": "skill_sys",
+      "title": "High-Performance Systems",
+      "type": "skill",
+      "level": 2,
+      "parentId": "cat_skills",
+      "description": "Low-level programming in C/C++, CUDA, and Vulkan. Focused on memory optimization, parallel threading, and maximizing GPU hardware utilization.",
+      "position": [
+        2.6600709860024905,
+        -7.497950031838,
+        -11.469200096636735
+      ]
+    },
+    {
+      "id": "skill_physics",
+      "title": "Physics-Constrained ML",
+      "type": "skill",
+      "level": 2,
+      "parentId": "cat_skills",
+      "description": "Designing neural networks that are constrained by actual physical laws (like orbital mechanics) rather than just statistical pattern matching.",
+      "position": [
+        5.108085315847548,
+        -12.187851601963285,
+        -1.9830534190407785
+      ]
+    },
+    {
+      "id": "skill_ai",
+      "title": "AI Infrastructure",
+      "type": "skill",
+      "level": 2,
+      "parentId": "cat_skills",
+      "description": "Building and deploying AI infrastructure, including Retrieval-Augmented Generation (RAG) pipelines, vector databases, and local Large Language Models (LLMs).",
+      "position": [
+        9.499804471381616,
+        -9.723909966410014,
+        -5.784681378143494
+      ]
+    },
+    {
+      "id": "skill_web",
+      "title": "Web & UI Architecture",
+      "type": "skill",
+      "level": 2,
+      "parentId": "cat_skills",
+      "description": "Developing immersive 3D web interfaces using React, WebGL, and Three.js to visualize complex data structures and neural network architectures.",
+      "position": [
+        11.045000992313513,
+        -1.1614685245900955,
+        -7.733509710348512
+      ]
+    },
+    {
+      "id": "edu_btech",
+      "title": "B.Tech Computer Science",
+      "type": "skill",
+      "level": 2,
+      "parentId": "cat_edu",
+      "description": "Currently pursuing a B.Tech in Computer Science (UID: 25BCS10109), maintaining a strong academic foundation while serving as Department Student Representative.",
+      "position": [
+        0.7437606078875674,
+        11.157758235872562,
+        7.259808743789344
+      ]
+    },
+    {
+      "id": "edu_uni",
+      "title": "Chandigarh University",
+      "type": "skill",
+      "level": 2,
+      "parentId": "cat_edu",
+      "description": "Balancing rigorous university coursework at Chandigarh University with independent, bleeding-edge research in high-performance computing.",
+      "position": [
+        2.2733526266084914,
+        5.019576342137311,
+        12.248326977682945
+      ]
+    },
+    {
+      "id": "exp_lt",
+      "title": "L&T Intern",
+      "type": "skill",
+      "level": 2,
+      "parentId": "cat_exp",
+      "description": "Navigating enterprise-scale engineering operations. Managed high-level IT infrastructure, networking, and systems support for an enterprise environment.",
+      "position": [
+        -6.728815098001732,
+        -11.764899272213855,
+        2.2647667448508617
+      ]
+    },
+    {
+      "id": "award_ev",
+      "title": "Emergent Ventures Grantee",
+      "type": "skill",
+      "level": 2,
+      "parentId": "cat_exp",
+      "description": "Awarded a competitive $5,500 grant from Emergent Ventures (recognized by Tyler Cowen) to fund independent research and hardware for Project TARS.",
+      "position": [
+        -5.092789297955058,
+        -8.829883676260792,
+        10.503686780782774
+      ]
+    },
+    {
+      "id": "concept_cuda",
+      "title": "CUDA Multi-Threading",
+      "type": "skill",
+      "level": 3,
+      "parentId": "proj_fieldchain",
+      "description": "Utilizing direct warp scheduling and memory-aligned execution in CUDA to achieve maximum parallel processing efficiency on NVIDIA GPUs.",
+      "position": [
+        -7.3631844489248905,
+        15.427883667472734,
+        0.6227520366473493
+      ]
+    },
+    {
+      "id": "concept_pcie",
+      "title": "PCIe 4.0 Streaming",
+      "type": "skill",
+      "level": 3,
+      "parentId": "proj_fieldchain",
+      "description": "Optimizing data pipelines to saturate PCIe Gen4 theoretical bandwidth limits, enabling zero-copy data streaming for massive datasets.",
+      "position": [
+        -4.3990793940022055,
+        15.34914633850816,
+        -6.079063023158877
+      ]
+    },
+    {
+      "id": "sys_memory",
+      "title": "Advanced Memory Mgmt",
+      "type": "skill",
+      "level": 3,
+      "parentId": "proj_roshan_arch",
+      "description": "Transitioning memory layouts from Array of Structures (AoS) to Structure of Arrays (SoA) to eliminate warp divergence and improve GPU cache hit rates.",
+      "position": [
+        -8.176168326414436,
+        13.984880296654143,
+        -8.425426803082742
+      ]
+    },
+    {
+      "id": "sys_deterministic",
+      "title": "Deterministic Runtimes",
+      "type": "skill",
+      "level": 3,
+      "parentId": "proj_roshan_arch",
+      "description": "Writing predictive, bounded execution flows in C++ that guarantee stable memory allocation and exact execution times.",
+      "position": [
+        -7.639246642843823,
+        16.362047851805244,
+        -5.469826621792101
+      ]
+    },
+    {
+      "id": "data_tess",
+      "title": "NASA TESS Light Curves",
+      "type": "skill",
+      "level": 3,
+      "parentId": "proj_tars",
+      "description": "Processing massive, noisy time-series photometric data from the NASA TESS mission to extract valid exoplanet transit signals.",
+      "position": [
+        -9.723082015483524,
+        2.133093714649922,
+        -14.823991994938334
+      ]
+    },
+    {
+      "id": "concept_exoplanet",
+      "title": "Exoplanet Iterations",
+      "type": "skill",
+      "level": 3,
+      "parentId": "proj_tars",
+      "description": "Applying physical constraints of celestial mechanics and orbital geometry to validate exoplanet candidates and reject false positives.",
+      "position": [
+        -5.244768793307617,
+        0.012198191317334794,
+        -16.42174393663592
+      ]
+    },
+    {
+      "id": "concept_simd",
+      "title": "SIMD Instructions",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_sys",
+      "description": "Leveraging Single Instruction, Multiple Data (SIMD) pipelines to process large blocks of cryptographic data simultaneously.",
+      "position": [
+        1.0395343800020145,
+        -11.181518227518751,
+        -14.436553539754307
+      ]
+    },
+    {
+      "id": "concept_warp",
+      "title": "Warp Scheduling",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_sys",
+      "description": "Managing GPU thread blocks (warps) to ensure continuous, non-divergent execution and maximum hardware utilization.",
+      "position": [
+        4.429285881808379,
+        -11.225908519699612,
+        -14.48845778770358
+      ]
+    },
+    {
+      "id": "concept_cpp",
+      "title": "C / C++",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_sys",
+      "description": "High-performance systems programming focusing on pointer arithmetic, manual memory management, and optimizing cache line boundaries.",
+      "position": [
+        3.9349275334691063,
+        -12.318588910054984,
+        -11.838227994233108
+      ]
+    },
+    {
+      "id": "concept_vulkan",
+      "title": "Vulkan Pipelines",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_sys",
+      "description": "Using custom Vulkan compute shaders to bind arithmetic directly to memory pipelines, avoiding standard driver overhead.",
+      "position": [
+        6.485940500536781,
+        -10.243448479767524,
+        -13.461353095279406
+      ]
+    },
+    {
+      "id": "concept_pytorch",
+      "title": "PyTorch",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_physics",
+      "description": "Building and training deep learning models, specifically designing custom loss functions that penalize physically impossible outputs.",
+      "position": [
+        7.7260066963032905,
+        -14.986659756943201,
+        1.4106861517586753
+      ]
+    },
+    {
+      "id": "concept_tensors",
+      "title": "Tensor Operations",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_physics",
+      "description": "Mapping high-dimensional data into optimized tensor structures for fast, hardware-accelerated matrix multiplication.",
+      "position": [
+        6.439181623948256,
+        -16.321148502980552,
+        -4.508841112366702
+      ]
+    },
+    {
+      "id": "concept_backprop",
+      "title": "Backpropagation",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_physics",
+      "description": "Implementing custom backpropagation logic to correct neural networks based on physical boundary constraints rather than just statistical error.",
+      "position": [
+        8.604969285318877,
+        -15.338480216896281,
+        -3.7383043868441845
+      ]
+    },
+    {
+      "id": "concept_pinns",
+      "title": "Physics-Informed NNs",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_physics",
+      "description": "Physics-Informed Neural Networks. Integrating differential equations into the training process to solve complex scientific problems.",
+      "position": [
+        5.733748291777815,
+        -16.394992993053854,
+        0.8652469290549063
+      ]
+    },
+    {
+      "id": "concept_llm",
+      "title": "Large Language Models",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_ai",
+      "description": "Integrating Large Language Models into local pipelines for unstructured data parsing and semantic reasoning tasks.",
+      "position": [
+        12.073737471219024,
+        -13.593325809217323,
+        -3.8462361011683956
+      ]
+    },
+    {
+      "id": "concept_rag",
+      "title": "RAG Architecture",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_ai",
+      "description": "Building Retrieval-Augmented Generation (RAG) architectures to ground AI responses in factual, domain-specific engineering data.",
+      "position": [
+        14.281854999529124,
+        -10.474143530755086,
+        -4.264938175034513
+      ]
+    },
+    {
+      "id": "concept_vector",
+      "title": "Vector Embeddings",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_ai",
+      "description": "Implementing vector databases and embedding models to enable sub-millisecond semantic search and data retrieval.",
+      "position": [
+        13.719808195472526,
+        -12.604193231232543,
+        -5.446882193821211
+      ]
+    },
+    {
+      "id": "concept_react",
+      "title": "React.js",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_web",
+      "description": "Using React.js to manage complex state and build dynamic user interfaces that sit on top of heavy 3D WebGL canvases.",
+      "position": [
+        15.180570157155671,
+        -3.4990600878076896,
+        -9.513075343734608
+      ]
+    },
+    {
+      "id": "concept_webgl",
+      "title": "WebGL",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_web",
+      "description": "Accessing low-level GPU rendering pipelines in the browser to build high-performance 3D data visualizations.",
+      "position": [
+        11.666354032835372,
+        -4.247576972729318,
+        -11.618075972540208
+      ]
+    },
+    {
+      "id": "concept_three",
+      "title": "Three.js",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_web",
+      "description": "Utilizing Three.js to translate complex mathematical backend graphs into interactive, spatial 3D environments.",
+      "position": [
+        16.08116200622647,
+        -1.6793465289795113,
+        -8.054453773482708
+      ]
+    },
+    {
+      "id": "concept_gf_math",
+      "title": "GF(2^31-1) Prime Math",
+      "type": "skill",
+      "level": 3,
+      "parentId": "proj_fieldchain",
+      "description": "Applying GF(2^31-1) Prime field mathematics to optimize cryptographic packing and avoid modulus bias in data storage.",
+      "position": [
+        -5.5,
+        14.2,
+        -6.1
+      ]
+    },
+    {
+      "id": "concept_eea",
+      "title": "Event Evidence Aggregator",
+      "type": "skill",
+      "level": 3,
+      "parentId": "proj_tars",
+      "description": "Developed the Event Evidence Aggregator, an algorithm to compare transit shapes and stabilize signal detection in sparse datasets.",
+      "position": [
+        -5.5,
+        3.2,
+        -15.1
+      ]
+    },
+    {
+      "id": "concept_echo",
+      "title": "ECHO Physics Validator",
+      "type": "skill",
+      "level": 3,
+      "parentId": "proj_tars",
+      "description": "Built the ECHO Physics Validator, a heuristic system that rejects >91% of false-positive periodic signals by enforcing solid-body physics.",
+      "position": [
+        -7.5,
+        -0.2,
+        -14.1
+      ]
+    },
+    {
+      "id": "concept_sff",
+      "title": "SFF Hardware Builds",
+      "type": "skill",
+      "level": 3,
+      "parentId": "proj_roshan_arch",
+      "description": "Designing and building custom Small Form Factor (SFF) workstations to maximize local compute power for AI and systems development.",
+      "position": [
+        -9.5,
+        15.2,
+        -4.1
+      ]
+    },
+    {
+      "id": "proj_hsastar",
+      "title": "HSA* Routing Engine",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_proj",
+      "description": "Developed HSA*, a proprietary, highly optimized pathfinding algorithm designed for real-time, safety-aware navigation. Peaked at 97\u00b5s path calculation.",
+      "position": [
+        -7.5,
+        10.2,
+        -3.1
+      ]
+    },
+    {
+      "id": "concept_geometric_loss",
+      "title": "Geometric Loss Functions",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_physics",
+      "description": "Creating custom geometric loss functions that penalize machine learning models when they violate known mathematical and physical laws.",
+      "position": [
+        4.5,
+        -15.2,
+        3.1
+      ]
+    },
+    {
+      "id": "phil_selective_depth",
+      "title": "Selective Depth Acquisition",
+      "type": "skill",
+      "level": 2,
+      "parentId": "core",
+      "description": "A cognitive methodology of acquiring deep technical mastery just-in-time to solve high-leverage bottlenecks. Focuses on capability over academic completeness.",
+      "position": [
+        5,
+        5,
+        -5
+      ]
+    },
+    {
+      "id": "phil_hardware_sympathetic",
+      "title": "Hardware-Sympathetic Software",
+      "type": "skill",
+      "level": 2,
+      "parentId": "core",
+      "description": "The philosophy of treating software as a physical constraint acting upon silicon. Every architectural decision is guided by memory alignment and throughput.",
+      "position": [
+        -5,
+        5,
+        5
+      ]
+    },
+    {
+      "id": "phil_top_down",
+      "title": "Top-Down Cognitive Architecture",
+      "type": "skill",
+      "level": 2,
+      "parentId": "core",
+      "description": "Macro-to-micro systems thinking. Identifying structural hardware limits before descending into algorithmic logic and implementation details.",
+      "position": [
+        5,
+        -5,
+        5
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "cat_edu",
+      "target": "core",
+      "opacity": 0.3
+    },
+    {
+      "source": "cat_exp",
+      "target": "core",
+      "opacity": 0.3
+    },
+    {
+      "source": "cat_proj",
+      "target": "core",
+      "opacity": 0.3
+    },
+    {
+      "source": "cat_skills",
+      "target": "core",
+      "opacity": 0.3
+    },
+    {
+      "source": "proj_fieldchain",
+      "target": "cat_proj",
+      "opacity": 0.2
+    },
+    {
+      "source": "proj_roshan_arch",
+      "target": "cat_proj",
+      "opacity": 0.2
+    },
+    {
+      "source": "proj_tars",
+      "target": "cat_proj",
+      "opacity": 0.2
+    },
+    {
+      "source": "proj_quanta",
+      "target": "cat_proj",
+      "opacity": 0.2
+    },
+    {
+      "source": "proj_cryptic",
+      "target": "cat_proj",
+      "opacity": 0.2
+    },
+    {
+      "source": "proj_safety",
+      "target": "cat_proj",
+      "opacity": 0.2
+    },
+    {
+      "source": "skill_sys",
+      "target": "cat_skills",
+      "opacity": 0.2
+    },
+    {
+      "source": "skill_physics",
+      "target": "cat_skills",
+      "opacity": 0.2
+    },
+    {
+      "source": "skill_ai",
+      "target": "cat_skills",
+      "opacity": 0.2
+    },
+    {
+      "source": "skill_web",
+      "target": "cat_skills",
+      "opacity": 0.2
+    },
+    {
+      "source": "edu_btech",
+      "target": "cat_edu",
+      "opacity": 0.2
+    },
+    {
+      "source": "edu_uni",
+      "target": "cat_edu",
+      "opacity": 0.2
+    },
+    {
+      "source": "exp_lt",
+      "target": "cat_exp",
+      "opacity": 0.2
+    },
+    {
+      "source": "award_ev",
+      "target": "cat_exp",
+      "opacity": 0.2
+    },
+    {
+      "source": "concept_cuda",
+      "target": "proj_fieldchain",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_pcie",
+      "target": "proj_fieldchain",
+      "opacity": 0.08
+    },
+    {
+      "source": "sys_memory",
+      "target": "proj_roshan_arch",
+      "opacity": 0.08
+    },
+    {
+      "source": "sys_deterministic",
+      "target": "proj_roshan_arch",
+      "opacity": 0.08
+    },
+    {
+      "source": "data_tess",
+      "target": "proj_tars",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_exoplanet",
+      "target": "proj_tars",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_simd",
+      "target": "skill_sys",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_warp",
+      "target": "skill_sys",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_cpp",
+      "target": "skill_sys",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_vulkan",
+      "target": "skill_sys",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_pytorch",
+      "target": "skill_physics",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_tensors",
+      "target": "skill_physics",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_backprop",
+      "target": "skill_physics",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_pinns",
+      "target": "skill_physics",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_llm",
+      "target": "skill_ai",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_rag",
+      "target": "skill_ai",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_vector",
+      "target": "skill_ai",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_react",
+      "target": "skill_web",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_webgl",
+      "target": "skill_web",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_three",
+      "target": "skill_web",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_gf_math",
+      "target": "proj_fieldchain",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_eea",
+      "target": "proj_tars",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_echo",
+      "target": "proj_tars",
+      "opacity": 0.08
+    },
+    {
+      "source": "concept_sff",
+      "target": "proj_roshan_arch",
+      "opacity": 0.08
+    },
+    {
+      "source": "proj_hsastar",
+      "target": "cat_proj",
+      "opacity": 0.2
+    },
+    {
+      "source": "concept_geometric_loss",
+      "target": "skill_physics",
+      "opacity": 0.08
+    },
+    {
+      "source": "proj_fieldchain",
+      "target": "concept_cuda",
+      "opacity": 0.1
+    },
+    {
+      "source": "proj_fieldchain",
+      "target": "concept_vulkan",
+      "opacity": 0.1
+    },
+    {
+      "source": "proj_tars",
+      "target": "skill_physics",
+      "opacity": 0.15
+    },
+    {
+      "source": "proj_tars",
+      "target": "concept_pytorch",
+      "opacity": 0.1
+    },
+    {
+      "source": "proj_quanta",
+      "target": "skill_physics",
+      "opacity": 0.1
+    },
+    {
+      "source": "proj_roshan_arch",
+      "target": "skill_sys",
+      "opacity": 0.15
+    },
+    {
+      "source": "proj_cryptic",
+      "target": "skill_web",
+      "opacity": 0.15
+    },
+    {
+      "source": "proj_hsastar",
+      "target": "skill_sys",
+      "opacity": 0.1
+    }
+  ]
+}

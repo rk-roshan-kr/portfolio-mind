@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100dvh;
+  min-height: -webkit-fill-available;
+  overflow: hidden;
+  background-color: #020205; /* The Void */
+  color: #ffffff;
+}
+
+.touch-none {
+  touch-action: none;
+}
+
+/* Silicon-Hardened Infrastructure */
+.neural-grid {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.scanline {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(0, 255, 255, 0.1), transparent);
+  position: absolute;
+  top: 0;
+  animation: scanning 4s linear infinite;
+  z-index: 50;
+  pointer-events: none;
+}
+
+@keyframes scanning {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+@keyframes pulse-underscore {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-pulse-underscore {
+  animation: pulse-underscore 1s step-end infinite;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 255, 0.2);
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 255, 0.4);
+}

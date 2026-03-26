@@ -1,0 +1,33 @@
+name: Neural Audit - LinkedIn Sync
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at 00:00 UTC
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install Dependencies
+        run: npm install
+        
+      - name: Run Neural Sync Script
+        env:
+          LINKEDIN_SCRAPER_KEY: ${{ secrets.LINKEDIN_SCRAPER_KEY }}
+        run: npx tsx scripts/sync-linkedin.ts
+        
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name 'NeuralBot'
+          git config --global user.email 'bot@antigravity.ai'
+          git add src/data/logs.ts
+          git commit -m "chore: automated neural audit sync [skip ci]" || echo "No changes to commit"
+          git push

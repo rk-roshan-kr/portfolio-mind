@@ -1,0 +1,63 @@
+
+# 2026-03-23 06:42:52.601912
++N
+
+# 2026-03-23 06:42:58.064226
++y
+
+# 2026-03-23 06:43:10.609654
++n
+
+# 2026-03-23 06:43:14.764150
++y
+
+# 2026-03-23 06:44:41.171892
++hi
+
+# 2026-03-23 06:45:30.224226
++Act as a Senior WebGL & Frontend Architect. I want to build a highly optimized, 3D interactive portfolio website called "portfolio-mind".                                                                                                                                                                                                                                                                               CORE CONCEPT:                                                                                                                                                                                                This is a 100% WebGL simulation of an LLM's Latent Vector Space (Embeddings). My resume data exists as glowing semantic clusters inside a massive 3D point cloud. The primary navigation is a chat
++interface. When a recruiter queries the chat, the AI casts a "Query Vector," highlighting relevant nodes using visual "Attention Weights," and the 3D camera flies the user through the point cloud.
++
++TECH STACK:
++- Framework: Next.js (App Router), TypeScript, Tailwind CSS.
++- 3D Rendering: three.js, @react-three/fiber, @react-three/drei.
++- State/Logic: zustand.
++- UI Animations: framer-motion, gsap (for 3D camera flight).                                                                                                                                                 
++                                                                                                                                                                                                             
++PART 1: THE CORE UI (HTML OVERLAY LAYER)                                                                                                                                                                     
++The UI sits strictly on top of the WebGL Canvas (using z-index) so the resume is perfectly readable.                                                                                                         
++1. The Cognitive Guide (Chat): A floating glassmorphism panel anchored to the bottom. Contains an input field, message history, and "Synaptic Prompts" (suggested query chips like "Show me Python skills"). 
++2. The Node HUD (Data Card): When a 3D node is clicked/focused, a crisp HTML card slides in on the right side. It contains: Title, Role, Impact Metrics, and an external [View GitHub] button.               
++3. Fallback QuickNav: A Cmd+K / Ctrl+K command palette allowing recruiters to search my CV in a standard list view. Clicking an item triggers the 3D camera to fly to that node.                             
++4. Breadcrumbs: A minimal top-left header showing my name and current graph state (e.g., "Latent Space > AI Projects").                                                                                      
++                                                                                                                                                                                                             
++PART 2: THE 3D ENGINE (LATENT SPACE)                                                                                                                                                                         
++Must run at 60fps on low-end hardware. Follow these strict WebGL rules:                                                                                                                                      
++1. Zero Real-Time Lights: Do not use PointLights or AmbientLights. Use MeshBasicMaterial or custom ShaderMaterials.                                                                                          
++2. The Void: scene.background is pitch black (#020205).                                                                                                                                                      
++3. The Dust (Latent Knowledge): Render 10,000 tiny, dim, greyish-blue particles using a single THREE.Points system. Cost: near zero GPU overhead.                                                            
++4. The CV Nodes (Embeddings): Render 20-30 larger, brightly colored glowing orbs suspended inside the dust. Use THREE.AdditiveBlending and depthWrite: false.                                                
++5. Layout (Semantic Clusters): Do not use heavy physics (no d3-force in browser). Pre-calculate or hardcode XYZ positions into semantic clusters (e.g., "AI/ML cluster" at x:10, y:5, z:-10; "Systems        
++cluster" at x:-10, y:-5, z:-5).                                                                                                                                                                              
++                                                                                                                                                                                                             
++PART 3: THE STATE MANAGEMENT (ZUSTAND)                                                                                                                                                                       
++Create a `useStore.ts` that bridges the UI and the 3D Canvas. It must include:                                                                                                                               
++- focusedNodeId: string | null                                                                                                                                                                               
++- activeQuery: string | null                                                                                                                                                                                 
++- glowingNodeIds: string[] (Nodes highlighted by the current chat context)                                                                                                                                   
++- chatHistory: Array<{ role: 'user'|'ai', content: string }>
++- Actions: setFocusedNode, triggerQuery, addChatMessage.                                                                                                                                                     
++                                                                                                                                                                                                             
++PART 4: THE INTERACTION (ATTENTION MECHANISM)                                                                                                                                                                
++When `triggerQuery` fires:                                                                                                                                                                                   
++1. Dim the 3D background dust by 80%.                                                                                                                                                                        
++2. Ignite the `glowingNodeIds` (multiply their emissive values so they blow out the bloom).                                                                                                                  
++3. Draw temporary, straight laser lines (Attention Weights) from a central "query coordinate" to the highlighted CV nodes.                                                                                   
++4. Use GSAP to fly the Drei <PerspectiveCamera> to frame the active cluster, and trigger the Node HUD UI to slide in.                                                                                        
++                                                                                                                                                                                                             
++YOUR FIRST TASK:                                                                                                                                                                                             
++1. Initialize the Next.js app structure and install the required dependencies (three, @react-three/fiber, @react-three/drei, zustand, framer-motion, gsap).                                                  
++2. Create the `useStore.ts` Zustand store based on the requirements above.                                                                                                                                   
++3. Create a static `data/knowledge-base.json` file with 5 mock CV nodes containing XYZ coordinates, title, type (skill/project), and description.                                                            
++4. Scaffold the `page.tsx` assembly showing the absolute positioning of the UI layer over the Canvas layer.                                                                                                  
++Do not write the complex shaders yet; just set up the architecture, state, and UI shells.

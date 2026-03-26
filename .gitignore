@@ -1,0 +1,47 @@
+# dependencies
+/node_modules
+node_modules/
+/.pnp
+.pnp.*
+
+# next.js
+/.next/
+.next/
+/out/
+
+
+# production
+/build
+
+# development
+/venv-roshan/
+venv-roshan/
+/venv/
+venv/
+/.vercel
+.vercel/
+
+# research data
+"projects MD/"
+projects*MD/
+roshan-neural-twin-v1/
+*.safetensors
+*.gguf
+*.bin
+*.pt
+*.ckpt
+*.node
+*.sst
+*.blob
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# brain
+/brain/
+brain/
