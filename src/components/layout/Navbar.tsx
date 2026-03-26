@@ -86,11 +86,15 @@ export const Navbar = () => {
       <div className="flex-1 flex items-center justify-end gap-3 md:gap-6 text-[10px]">
         {/* Navigation Links */}
         <div className="flex items-center gap-2 sm:gap-4 text-white/40 tracking-tighter">
+          <a href="https://github.com/rk-roshan-kr" target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition-colors tracking-widest hidden sm:block">[ REPOS ]</a>
+          <a href="/papers" className={`transition-colors tracking-widest ${pathname === '/papers' ? 'text-cyan-400 font-bold' : 'hover:text-cyan-400'}`}>
+            <span className="hidden sm:inline">[ PAPERS ]</span>
+            <span className="sm:hidden text-[9px]">PAPERS</span>
+          </a>
           <a href="/logs" className={`transition-colors tracking-widest ${pathname === '/logs' ? 'text-cyan-400 font-bold' : 'hover:text-cyan-400'}`}>
             <span className="hidden sm:inline">[ LOGS ]</span>
             <span className="sm:hidden text-[9px]">LOGS</span>
           </a>
-          <a href="/resume.pdf" download className="hidden sm:block hover:text-cyan-400 transition-colors tracking-widest">[ PAPERS ]</a>
         </div>
 
         {/* Social cluster (Desktop Only) */}
