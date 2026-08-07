@@ -1,0 +1,123 @@
+\documentclass[10pt,a4paper,sans]{moderncv}
+
+% moderncv themes
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+% Font and character encoding
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+
+% Disable microtype font expansion to prevent pdfTeX errors with non-scalable fonts
+\microtypesetup{expansion=false}
+
+% Adjust page margins to naturally fill the single page
+\usepackage[scale=0.88, top=0.3in, bottom=0.3in, left=0.35in, right=0.35in]{geometry}
+\setlength{\hintscolumnwidth}{2.8cm} % narrow date column to maximize text width and prevent wrapping
+
+% personal data
+\name{Roshan Kumar}{Gupta}
+\title{Research Engineer \& Systems Architect}
+\address{Chandigarh, India}{}{}
+\phone[mobile]{+91 9334098565}
+\email{roshankumargupta.sh@gmail.com}
+\homepage{tars.earth}
+
+\begin{document}
+\small % reduce font size of body to 9pt to fit all details on exactly one page
+\makecvtitle
+\vspace*{-8mm} % spacing reduction after header
+
+% Section 1: Education
+\section{Education}
+\cventry{2025--2029}{Bachelor of Technology in Computer Science}{Chandigarh University}{Mohali}{Expected}{
+Relevant Coursework: High-Performance Computing, Low-Level Systems, Parallel Architectures, Database Systems.}
+\vspace*{-1.2mm}
+
+% Section 2: Experience
+\section{Experience}
+\cventry{Jul 2026--Present}{Founder \& Lead Architect}{Earthos Platform}{}{\url{earthos.shop}}{
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, leftmargin=10pt]
+    \item Deployed the production storefront and interactive reader workspace (\href{https://earthos.shop}{earthos.shop}) for \textit{The AGI Question} manuscript using Next.js 16 (React 19) and Supabase PostgreSQL.
+    \item Engineered automated multi-warehouse nearest-node shipping routing algorithms and integrated Shiprocket APIs to dynamically optimize logistics.
+    \item Developed a secure PDF generation pipeline with real-time DRM watermark fingerprinting and cryptographic user-state injection.
+\end{itemize}}
+\vspace*{-1.2mm}
+
+\cventry{Dec 2025--Jan 2026}{L3 IT Intern}{SMG Electric Scooters Ltd}{Chandigarh}{}{
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, leftmargin=10pt]
+    \item Designed and developed a custom internal CRM portal, streamlining logistics and vendor development workflows for enterprise-scale operations.
+    \item Collaborated with cross-functional teams to identify infrastructure bottlenecks, reducing manual processing time through automation.
+\end{itemize}}
+\vspace*{-1.2mm}
+
+\cventry{Oct 2025--Present}{Student Representative}{Chandigarh University}{Mohali}{}{
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, leftmargin=10pt]
+    \item Act as primary student-admin liaison, managing high-stakes communication to resolve complex infrastructure and academic issues.
+    \item Facilitated multiple departmental town-halls, ensuring transparent information flow and collaborative problem-solving across 400+ student cohorts.
+\end{itemize}}
+\vspace*{-1.5mm}
+
+% Section 3: System Engineering
+\section{System Engineering}
+\cvitem{Project Earthos}{\textbf{Project Earthos (Synapse Arch)} $|$ \textit{Autonomous Cognitive Substrate}
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, leftmargin=10pt]
+    \item Architected and implemented Synapse Arch, a neural-symbolic cognitive substrate combining event-sourced memory hydration and global workspace attention (GWT) coalitions.
+    \item Implemented AST and import locks to block non-deterministic floating-point namespaces, enforcing strict byte-level execution parity across distinct CPU platforms.
+\end{itemize}}
+\vspace*{-1.2mm}
+
+\cvitem{FieldChain}{\textbf{FieldChain} $|$ \href{https://github.com/rk-roshan-kr/FieldChain}{github.com/rk-roshan-kr/FieldChain}
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, leftmargin=10pt]
+    \item Secured a \$1,500 research grant; engineered a GPU-centric storage integrity layer sustaining 7GB/s sequential writes via PCIe 4.0, outperforming specialized DPUs by 4.2x (166.86 GiB/s peak bandwidth) via Vulkan.
+    \item Selected to present research paper at the IEEE CCNCPS 2026 conference in Dubai, UAE.
+\end{itemize}}
+\vspace*{-1.2mm}
+
+\cvitem{Project TARS}{\textbf{Project TARS Ecosystem} $|$ \href{https://tars.earth}{tars.earth}
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, leftmargin=10pt]
+    \item Secured \$5,500 Emergent Ventures grant; designed the TARS Core physics-constrained validation framework for sparse two-transit exoplanet candidate vetting, achieving 70.1\% precision on NASA TESS data.
+    \item Formulated architectural specifications for the TARS-EX (physics-aware ensemble ML) research branch.
+    \item Engineered \textit{tars\_infra}, a parallel FITS data ingestion engine utilizing multi-drive spanning to download and index 150,000+ files from the MAST database.
+\end{itemize}}
+\vspace*{-1.2mm}
+
+\cvitem{QUANTA}{\textbf{Thesis QUANTA} $|$ Working Paper
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, leftmargin=10pt]
+    \item Defined an operational info-horizon for NISQ circuits via entropic noise metrics; formulated exponential scaling law and mapped the "Undead Zone" to balance state extractability against environmental decoherence.
+\end{itemize}}
+\vspace*{-1.2mm}
+
+\cvitem{HSA* / Arch}{\textbf{HSA* Algorithm \& Roshan Arch}
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, leftmargin=10pt]
+    \item Formulated routing engine using inverse square law safety weights, achieving pathfinding in 97$\mu$s (140x faster than Dijkstra).
+    \item Architected a custom deterministic memory framework in C++ to bypass garbage collection pauses and ensure predictable real-time runtimes.
+\end{itemize}}
+\vspace*{-1.2mm}
+
+\cvitem{Cryptic}{\textbf{Cryptic} $|$ ZeroToOne Hackathon Winner
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, leftmargin=10pt]
+    \item Served as Frontend Lead for a DeFi Treasury dashboard, managing UI/UX architecture and 3D WebGL spatial liquidity flow visualizations.
+\end{itemize}}
+\vspace*{-1.5mm}
+
+% Section 4: Technical Skills
+\section{Technical Skills}
+\cvitem{Low-Level}{CUDA, Vulkan, PTX, C++, Deterministic Runtimes, Memory Architectures.}
+\cvitem{Systems}{React (Architecture), PyTorch (Physics-ML), Figma (UI Primitives).}
+\vspace*{-1.5mm}
+
+% Section 5: Honors & Certifications
+\section{Honors \& Certifications}
+\cvitem{Awards}{Winner, ZeroToOne Hackathon; Winner, Zinnovatio Hackathon; 15+ Hackathons participation.}
+\cvitem{Certs}{Scientific Writing (Polytechnique), Azure AI Cert (Vision, NLP).}
+\vspace*{-1.5mm}
+
+% Section 6: Extracurriculars
+\section{Extracurricular Activities}
+\cvitem{Hackathons}{Highly active in the global hackathon circuit (15+ events), focus on building collaborative open-source tools.}
+\cvitem{Interests}{Exploring the intersection of quantum noise limits, signal processing, and low-level GPU acceleration.}
+
+\end{document}

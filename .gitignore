@@ -45,3 +45,11 @@ yarn-error.log*
 # brain
 /brain/
 brain/
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+

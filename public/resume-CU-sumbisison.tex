@@ -1,0 +1,155 @@
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage[left=0.4in, right=0.4in, top=0.4in, bottom=0.4in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{calc}
+
+\definecolor{primary}{RGB}{15, 60, 130} % Blue from sample
+\definecolor{sidebarbg}{RGB}{235, 235, 235} % Light gray
+
+% Section formatting: Blue, Uppercase, with a horizontal rule below
+\titleformat{\section}{\large\bfseries\color{primary}\uppercase}{}{0em}{}[\vspace{-2mm}\rule{\linewidth}{0.8pt}]
+\titlespacing*{\section}{0pt}{2ex}{1.5ex}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\pagestyle{empty}
+
+% Full-width header spanning both columns
+\noindent
+{\Huge \textbf{\color{primary}Roshan Kumar Gupta}} \\[2mm]
+{\Large Research Engineer \& Systems Architect} \\
+\vspace{2mm}
+
+% Two minipages for strictly sequential ATS parsing and dynamic vertical alignment
+\noindent
+\begin{minipage}[t]{0.63\textwidth}
+\vspace*{0pt} % align top
+
+\section{Career Objective}
+Motivated Computer Science Engineering student with a strong foundation in low-level systems architecture, high-performance computing, and deterministic runtimes. Deeply passionate about building robust, physics-aware solutions and scalable platforms that solve complex engineering challenges. Seeking a Research Engineer or Systems Architect Intern role where I can leverage my proficiency in C++, Python, and parallel computing architectures to drive innovation and push the boundaries of modern computational frameworks.
+
+\section{Education}
+\begin{itemize}[leftmargin=12pt, itemsep=1pt, parsep=0pt]
+    \item \textbf{Bachelor of Engineering (Computer Science)} \\ Chandigarh University, Mohali $|$ CGPA: 6.98 \textbf{(2025 -- 2029)}
+    \item \textbf{Senior Secondary Education (CBSE)} \\ RSVM $|$ Percentage: 65\% \textbf{(2023 -- 2025)}
+    \item \textbf{Secondary Education (CBSE)} \\ GGPS $|$ Percentage: 80.4\% \textbf{(2022 -- 2023)}
+\end{itemize}
+
+\section{Work Experience}
+\textbf{Earthos Platform} $|$ Founder \& Lead Architect \textbf{(Jul 2026 -- Present)}
+\begin{itemize}[leftmargin=12pt, itemsep=1pt, parsep=0pt]
+    \item Deployed the production storefront for \textit{The AGI Question} using Next.js 16 and Supabase.
+    \item Engineered automated multi-warehouse nearest-node shipping algorithms via Shiprocket APIs.
+    \item Developed a secure PDF generation pipeline with real-time DRM watermark fingerprinting.
+\end{itemize}
+\vspace{2.5mm}
+
+\textbf{SMG Electric Scooters Ltd} $|$ L3 IT Intern \textbf{(Dec 2025 -- Jan 2026)}
+\begin{itemize}[leftmargin=12pt, itemsep=1pt, parsep=0pt]
+    \item Designed an internal CRM portal, streamlining logistics and vendor workflows via automation.
+\end{itemize}
+\vspace{2.5mm}
+
+\textbf{Chandigarh University} $|$ Student Rep \textbf{(Oct 2025 -- Present)}
+\begin{itemize}[leftmargin=12pt, itemsep=1pt, parsep=0pt]
+    \item Managed high-stakes communication to resolve academic and infrastructure issues for 400+ students.
+\end{itemize}
+
+\section{Projects}
+\textbf{Project TARS Ecosystem} $|$ Python, Data Science \textbf{(2025)} \href{https://tars.earth}{tars.earth}
+\begin{itemize}[leftmargin=12pt, itemsep=1pt, parsep=0pt]
+    \item Secured \$5,500 Emergent Ventures grant; designed the TARS Core physics-constrained validation framework achieving 70.1\% precision on NASA TESS data.
+    \item Engineered \textit{tars\_infra}, a parallel FITS data ingestion engine utilizing multi-drive spanning to index 150,000+ files from the MAST database.
+\end{itemize}
+\vspace{2mm}
+
+\textbf{FieldChain} $|$ C++, Vulkan \textbf{(2025)} \href{https://github.com/rk-roshan-kr/FieldChain}{github.com/rk-roshan-kr/FieldChain}
+\begin{itemize}[leftmargin=12pt, itemsep=1pt, parsep=0pt]
+    \item Secured \$1,500 grant; engineered a GPU-centric storage layer sustaining 7GB/s sequential writes via PCIe 4.0, outperforming specialized DPUs by 4.2x via Vulkan.
+\end{itemize}
+\vspace{2mm}
+
+\textbf{Project Earthos (Synapse Arch)} $|$ Python, AI \textbf{(2026)} \href{https://earthos.shop}{earthos.shop}
+\begin{itemize}[leftmargin=12pt, itemsep=1pt, parsep=0pt]
+    \item Architected a neural-symbolic cognitive substrate combining event-sourced memory hydration.
+    \item Implemented AST locks to block non-deterministic floating-point namespaces, enforcing execution parity.
+\end{itemize}
+
+\section{Achievements}
+\begin{itemize}[leftmargin=12pt, itemsep=1pt, parsep=0pt]
+    \item \textbf{Grants (2025):} Secured cumulative research grants totaling \$6,500 (Emergent Ventures, FieldChain).
+    \item \textbf{Conferences (2026):} Selected to present FieldChain research paper at the IEEE CCNCPS 2026 conference in Dubai.
+\end{itemize}
+
+\end{minipage}%
+\hfill
+\setlength{\fboxsep}{3mm}
+\colorbox{sidebarbg}{%
+\begin{minipage}[t]{\dimexpr0.34\textwidth-2\fboxsep\relax}
+\vspace*{0pt} % align top
+
+\section{Personal Info}
+\faPhone \ +91 9334098565 \\
+\faMapMarker \ Mohali, Punjab, India \\
+\faEnvelope \ \href{mailto:roshankumargupta.sh@gmail.com}{roshankumargupta.sh@gmail.com} \\
+\faLinkedin \ \href{https://linkedin.com/in/roshankumargupta-0xc0de}{roshankumargupta-0xc0de} \\
+\faGithub \ \href{https://github.com/rk-roshan-kr}{rk-roshan-kr} \\
+\faGlobe \ \href{https://tars.earth}{tars.earth}
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=12pt, itemsep=1pt, parsep=0pt]
+    \item \textbf{Low-Level -} \\ CUDA, Vulkan, PTX, C++, Deterministic Runtimes
+    \item \textbf{Systems \& ML -} \\ React, PyTorch, Next.js
+    \item \textbf{Backend -} \\ Node.js, PostgreSQL, Supabase, REST APIs
+\end{itemize}
+
+\section{Interpersonal}
+\begin{itemize}[leftmargin=12pt, itemsep=1pt, parsep=0pt]
+    \item Adaptable in fast-paced environments
+    \item Active Listening \& Clear Communication
+    \item Leadership \& Strategic Project Planning
+    \item Problem Solving with a Critical Mindset
+\end{itemize}
+
+\section{Awards \& Certs}
+\begin{itemize}[leftmargin=12pt, itemsep=1pt, parsep=0pt]
+    \item \textbf{Research Excellence Award} (CU)
+    \item \textbf{Winner}, ZeroToOne Hackathon
+    \item \textbf{Winner}, Zinnovatio Hackathon
+    \item Scientific Writing (Polytechnique)
+    \item Azure AI Cert (Vision, NLP)
+\end{itemize}
+
+\section{Extracurricular}
+\begin{itemize}[leftmargin=12pt, itemsep=1pt, parsep=0pt]
+    \item \textbf{Hackathons -} Highly active in the global hackathon circuit (15+ events).
+    \item \textbf{Open Source -} Contributor to physics simulation libraries.
+    \item \textbf{Research -} Active member in deep tech systems architecture groups.
+\end{itemize}
+
+\section{Interest \& Hobbies}
+\begin{itemize}[leftmargin=12pt, itemsep=1pt, parsep=0pt]
+    \item Competitive Programming
+    \item Quantum noise limits
+    \item Astronomical data
+    \item Hardware tinkering
+    \item Reading research
+\end{itemize}
+
+\section{Languages Known}
+\begin{itemize}[leftmargin=12pt, itemsep=1pt, parsep=0pt]
+    \item English - Professional Working
+    \item Hindi - Native or Bilingual
+\end{itemize}
+\vspace*{1mm}
+\end{minipage}%
+}
+\end{document}
