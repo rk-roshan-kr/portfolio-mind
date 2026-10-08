@@ -1,0 +1,92 @@
+\documentclass[10pt,a4paper,sans]{moderncv}
+
+% moderncv themes
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+% Font and character encoding
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+
+% Disable microtype font expansion to prevent pdfTeX errors with non-scalable fonts
+\microtypesetup{expansion=false}
+
+% Margins & spacing optimized for 1-page academic research resume
+\usepackage[scale=0.90, top=0.28in, bottom=0.28in, left=0.32in, right=0.32in]{geometry}
+\setlength{\hintscolumnwidth}{2.3cm}
+
+% Personal Data
+\name{Roshan Kumar}{Gupta}
+\title{Research Engineer \& Systems Architect}
+\address{Chandigarh, India}{}{}
+\phone[mobile]{+91 9334098565}
+\email{roshankumargupta.sh@gmail.com}
+\homepage{roshankumargupta.tech}
+\social[github]{rk-roshan-kr}
+\social[linkedin]{roshankumargupta-0xc0de}
+
+\begin{document}
+\small
+\makecvtitle
+\vspace*{-8.5mm}
+
+% Section 1: Education
+\section{Education}
+\cventry{2025--2029}{B.Tech. in Computer Science and Engineering}{Chandigarh University}{Mohali}{Expected}{
+\textbf{Relevant Coursework:} High-Performance Computing, Low-Level Systems, Parallel Architectures, Database Systems.}
+\vspace*{-1.2mm}
+
+% Section 2: Publications & Preprints
+\section{Publications \& Preprints}
+\cvitem{Conference}{\textbf{FieldChain: A Wire-Speed Primitive for Energy-Efficient Storage Integrity}
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, leftmargin=10pt]
+    \item \textit{IEEE CCNCPS 2026} (Dubai, UAE) --- \textbf{Best Student Paper Award \& Designated Session Chair}.
+    \item Secured \$1,500 grant; engineered GPU-centric storage integrity layer sustaining 7\,GB/s sequential writes via PCIe 4.0 (166.86\,GiB/s peak bandwidth) bypassing specialized DPUs via Vulkan.
+\end{itemize}}
+\vspace*{-0.8mm}
+
+\cvitem{Preprints \& Working Papers}{\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, leftmargin=10pt]
+    \item \textbf{ModelVM:} \textit{Virtualizing Semantic State and Model Residency for Resource-Constrained Language Model Systems}. Completed manuscript for arXiv/review. Introduces user-space memory virtualization and typed Cognitive State Packets (CSP) for LLM ensembles.
+    \item \textbf{TARS Core:} \textit{A Physics-Constrained Machine Learning Pipeline for High-Precision Exoplanet Detection in Sparse-Transit Regimes}. Completed manuscript for arXiv. Formulates ECHO geometric consistency proxies and Bayesian evidence aggregation on NASA TESS data.
+    \item \textbf{The Entropic Noise Boundary:} \textit{An Operational Observability Horizon for NISQ Systems}. Completed manuscript for arXiv. Derives purity-distinguishability equivalence bounds and R{\'e}nyi-2 information witnesses for noisy quantum channels.
+    \item \textbf{Logical Protection Beyond Observability Horizons:} \textit{The Undead Zone in Surface-Code Simulations}. Completed manuscript for arXiv. Evaluates logical correctability using surface-code stabilizer simulations in Stim/PyMatching.
+\end{itemize}}
+\vspace*{-1.2mm}
+
+% Section 3: Systems & Scientific Research Projects
+\section{Systems \& Scientific Research Projects}
+\cvitem{Project TARS}{\textbf{Project TARS Ecosystem} $|$ \href{https://tars.earth}{\color{blue}tars.earth}
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, leftmargin=10pt]
+    \item Secured a \textbf{\$5,500 Emergent Ventures grant}; designed the TARS Core physics-constrained validation framework for sparse-transit NASA TESS exoplanet vetting, achieving 70.1\% precision on NASA TESS data.
+    \item Formulated architectural specifications for TARS-EX (physics-aware ensemble ML) and engineered \textit{tars\_infra}, a parallel FITS ingestion engine processing 150,000+ MAST files.
+\end{itemize}}
+\vspace*{-0.8mm}
+
+\cvitem{Earthos Substrate}{\textbf{Project Earthos \& Monograph} $|$ \href{https://earthos.shop}{\color{blue}earthos.shop}
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, leftmargin=10pt]
+    \item Authored \textit{The AGI Question: What Does It Take to Become a Mind?} --- exploring cognitive philosophy, neuroscience, and machine mind; deployed the interactive digital reader workspace.
+    \item Architected Synapse Arch neural-symbolic substrate combining event-sourced memory hydration, GWT attention coalitions, and AST locks enforcing strict byte-level execution parity.
+\end{itemize}}
+\vspace*{-0.8mm}
+
+\cvitem{HSA* / Memory}{\textbf{HSA* Routing \& Roshan Deterministic Runtime Arch}
+\begin{itemize}[noitemsep, topsep=0pt, partopsep=0pt, parsep=0pt, leftmargin=10pt]
+    \item Formulated routing engine using inverse square law safety weights, achieving pathfinding in 97\,$\mu$s (140x faster than Dijkstra). Architected C++ deterministic memory allocator eliminating GC pauses.
+\end{itemize}}
+\vspace*{-1.2mm}
+
+% Section 4: Technical Skills
+\section{Technical Skills}
+\cvitem{Low-Level}{CUDA, Vulkan, PTX, C++, Deterministic Runtimes, Memory Architectures, PCIe DMA.}
+\cvitem{Scientific \& ML}{PyTorch (Physics-ML), FITS Data Pipelines, Stim / PyMatching Quantum Simulators, JAX.}
+\cvitem{Architecture}{Distributed State Protocols, AST Verification, High-Performance Parallelism, Next.js, Supabase.}
+\vspace*{-1.2mm}
+
+% Section 5: Honors & Awards
+\section{Honors \& Awards}
+\cvitem{Grants \& Honors}{\textbf{Research Grant Support from Emergent Ventures} (\$5,500 for Project TARS); \textbf{Best Student Paper Award} (IEEE CCNCPS 2026, Dubai); \textbf{Research Excellence Award} (Chandigarh University); Scientific Writing (Polytechnique).}
+\cvitem{Competitions}{\textbf{1st Place, Tekathon 2026 / SIH Internal} (ISRO PS: SIH26168, Smart Vehicles); \textbf{4th Place, Hacktoberfest 2026}; Winner, ZeroToOne Hackathon \& Zinnovatio Hackathon.}
+
+\end{document}

@@ -48,5 +48,5 @@
 
 ## ACADEMIC_ID
 - **UID**: 25BCS10109 (Chandigarh University).
-- **Status**: Department Student Representative (DSR).
+- **Status**: Former Department Student Representative (DSR) (Tenure: Oct 2025 – Sep 2026).
 - **Awards**: Emergent Ventures Grantee, ZeroToOne Winner.

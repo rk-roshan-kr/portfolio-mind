@@ -125,14 +125,25 @@ export const Navbar = () => {
         </div>
 
         {/* Primary Action (Small & Functional) */}
-        <a
-          href="/resume.pdf"
-          download
-          className="px-2 sm:px-4 py-1.5 border border-cyan-500/30 bg-transparent text-cyan-400 tracking-widest uppercase transition-all duration-300 hover:bg-cyan-500 hover:text-black"
-        >
-          <span className="hidden sm:inline">[ EXPORT_PDF ]</span>
-          <span className="sm:hidden text-[9px]">PDF</span>
-        </a>
+        <div className="flex items-center gap-1.5">
+          <a
+            href="/resume.pdf"
+            download
+            title="Download Industry Resume"
+            className="px-2 sm:px-3 py-1.5 border border-cyan-500/30 bg-transparent text-cyan-400 tracking-widest uppercase transition-all duration-300 hover:bg-cyan-500 hover:text-black"
+          >
+            <span className="hidden sm:inline">[ RESUME_PDF ]</span>
+            <span className="sm:hidden text-[9px]">PDF</span>
+          </a>
+          <a
+            href="/resume-research.pdf"
+            download
+            title="Download Academic Research Resume"
+            className="hidden md:inline-block px-2 sm:px-3 py-1.5 border border-purple-500/30 bg-transparent text-purple-300 tracking-widest uppercase transition-all duration-300 hover:bg-purple-500 hover:text-black"
+          >
+            <span>[ RESEARCH_PDF ]</span>
+          </a>
+        </div>
       </div>
     </header>
   );

@@ -200,6 +200,27 @@ export default function PortfolioHome() {
                     <div className="md:col-span-9 space-y-12">
                       {[
                         {
+                          year: 'JUL 2026-PRESENT',
+                          role: 'Author & Lead Architect',
+                          company: 'Earthos Platform (earthos.shop)',
+                          desc: "Authored 'The AGI Question: What Does It Take to Become a Mind?', bridging cognitive philosophy, neuroscience, and architecture. Engineered the production storefront, interactive reader workspace, and automated nearest-node multi-warehouse logistics.",
+                          icon: <Zap size={18} className="text-cyan-400" />
+                        },
+                        {
+                          year: '2026',
+                          role: 'Best Student Paper & Session Chair',
+                          company: 'IEEE CCNCPS 2026 (Dubai, UAE)',
+                          desc: 'Awarded Best Student Paper for FieldChain (GPU-centric storage integrity at 166.86 GiB/s via Vulkan). Invited as designated Session Chair.',
+                          icon: <Award size={18} className="text-yellow-400" />
+                        },
+                        {
+                          year: '2026',
+                          role: '1st Place Champion (Smart Vehicles)',
+                          company: 'Tekathon 2026 / SIH Internal (ISRO PS: SIH26168)',
+                          desc: 'Ranked 1st place in Chandigarh University internal selection for Smart India Hackathon solving ISRO problem statement SIH26168 with high-reliability edge telemetry.',
+                          icon: <Award size={18} className="text-green-400" />
+                        },
+                        {
                           year: '2025-PRESENT',
                           role: 'Independent Research Engineer',
                           company: 'Emergent Ventures Grantee',
@@ -207,25 +228,18 @@ export default function PortfolioHome() {
                           icon: <Award size={18} className="text-cyan-400" />
                         },
                         {
-                          year: '2025/2026',
+                          year: 'DEC 2025-JAN 2026',
                           role: 'L3 IT Intern',
                           company: 'SMG Electric Scooters Ltd',
                           desc: 'Designed and developed an internal CRM portal to automate logistics and vendor development workflows.',
                           icon: <Briefcase size={18} className="text-blue-400" />
                         },
-                        // {
-                        //   year: '2024',
-                        //   role: 'Winner',
-                        //   company: 'ZeroToOne Hackathon',
-                        //   desc: 'Engineered a decentralized treasury dashboard (Cryptic) that won first place. Implemented complex spatial UI for DeFi governance visualization.',
-                        //   icon: <Zap size={18} className="text-yellow-400" />
-                        // },
                         {
-                          year: '2025-PRESENT',
-                          role: 'Dept Representative',
+                          year: 'OCT 2025 - SEP 2026',
+                          role: 'Former Dept Student Representative',
                           company: 'Chandigarh University',
-                          desc: 'Leading a department of 1200+ students. Bridging the gap between academic administration and student technical initiatives.',
-                          icon: <Users size={18} className="text-green-400" />
+                          desc: 'Represented a department of 1200+ students. Facilitated academic/research coordination and recipient of University Research Excellence Award.',
+                          icon: <Users size={18} className="text-purple-400" />
                         }
                       ].map((exp, idx) => (
                         <motion.div
@@ -309,18 +323,46 @@ export default function PortfolioHome() {
                     <div className="md:col-span-9 space-y-24">
                       {[
                         {
-                          title: "Project TARS",
-                          id: "proj_tars",
-                          tags: ["ML", "Physics", "NASA"],
-                          metrics: ["GRANT: $5,500", "DATA: TESS_S32"],
-                          desc: "A physics-constrained machine learning pipeline that processes NASA TESS data to discover exoplanets. Funded by Emergent Ventures to eliminate false-positives via celestial mechanics validation."
-                        },
-                        {
                           title: "FieldChain GPU Storage",
                           id: "proj_fieldchain",
-                          tags: ["Systems", "CUDA", "NVMe"],
-                          metrics: ["SPEED: 166.86 GiB/s", "LATENCY: ~90\u00b5s"],
-                          desc: "GPU-accelerated storage integrity validator for NVMe arrays. Bypasses OS storage stacks to perform real-time cryptographic integrity checks directly on the GPU."
+                          tags: ["IEEE_Best_Paper", "Systems", "CUDA", "Vulkan"],
+                          metrics: ["AWARD: BEST_STUDENT_PAPER", "VENUE: IEEE_CCNCPS_DUBAI", "PEAK: 166.86 GiB/s"],
+                          desc: "GPU-accelerated storage integrity layer sustaining 7GB/s sequential writes via PCIe 4.0, outperforming specialized DPUs by 4.2x. Awarded Best Student Paper & Session Chair at IEEE CCNCPS 2026 (Dubai, UAE)."
+                        },
+                        {
+                          title: "Project Earthos & Monograph",
+                          id: "proj_earthos",
+                          tags: ["Monograph", "Cognition", "Next.js 16", "Supabase"],
+                          metrics: ["WORK: AUTHORED_VOLUME", "LIVE: EARTHOS.SHOP"],
+                          desc: "Authored 'The AGI Question: What Does It Take to Become a Mind?', bridging cognitive philosophy, neuroscience, and computational intelligence. Engineered the production storefront, interactive reader workspace, and Synapse Arch substrate."
+                        },
+                        {
+                          title: "Tekathon 2026 / Smart Vehicles",
+                          id: "proj_tekathon",
+                          tags: ["SIH_Internal", "ISRO", "Smart_Vehicles", "Edge_Vision"],
+                          metrics: ["RANK: 1ST_PLACE", "PS: SIH26168"],
+                          desc: "Ranked 1st place in Smart India Hackathon internal round for ISRO problem statement SIH26168. Developed high-reliability edge vision and deterministic telemetry processing for smart vehicle navigation."
+                        },
+                        {
+                          title: "Hacktoberfest 2026",
+                          id: "proj_hacktoberfest",
+                          tags: ["Open_Source", "Global", "Systems_Engineering"],
+                          metrics: ["RANK: 4TH_GLOBAL", "SPRINT: 2026"],
+                          desc: "Ranked 4th place globally for high-impact software contributions across open-source systems repositories and deterministic runtimes."
+                        },
+                        {
+                          title: "Project TARS Ecosystem",
+                          id: "proj_tars",
+                          tags: ["Emergent_Ventures", "ML", "Physics", "NASA"],
+                          metrics: ["GRANT: $5,500", "PRECISION: 70.1%"],
+                          desc: "Physics-constrained ML pipeline for sparse NASA TESS exoplanet candidate vetting. Backed by a $5,500 Emergent Ventures grant. Engineered tars_infra parallel FITS ingestion engine processing 150,000+ files."
+                        },
+                        {
+                          title: "ModelVM Semantic Virtualization",
+                          id: "proj_modelvm",
+                          tags: ["LLM", "Virtualization", "Memory_Architecture"],
+                          metrics: ["STATUS: PREPRINT", "PRIMITIVE: CSP_STATE"],
+                          desc: "Virtualizing semantic state and model residency for resource-constrained language model systems via user-space memory virtualization and typed Cognitive State Packets (CSP)."
                         },
                         {
                           title: "Cryptic DAO Dashboard",
@@ -333,29 +375,15 @@ export default function PortfolioHome() {
                           title: "HSA* Routing Engine",
                           id: "proj_hsastar",
                           tags: ["Algorithms", "Pathfinding", "IP"],
-                          metrics: ["COMPUTE: 97\u00b5s", "STATUS: IP_PENDING"],
+                          metrics: ["COMPUTE: 97µs", "STATUS: IP_PENDING"],
                           desc: "Real-time pathfinding engine utilizing inverse square law heuristics. Designed for safety-aware navigation in high-density data environments."
                         },
                         {
-                          title: "QUANTA Physics Thesis",
+                          title: "QUANTA / Entropic Noise Boundary",
                           id: "proj_quanta",
-                          tags: ["Physics", "Quantum", "Research"],
-                          metrics: ["PHASE: THESIS", "FOCUS: SIGNAL_TO_NOISE"],
-                          desc: "Research initiative defining an experimental law for the signal-to-noise limit of qubits. Synthesizing quantum error correction with information theory."
-                        },
-                        {
-                          title: "Roshan Architecture",
-                          id: "proj_roshan_arch",
-                          tags: ["Systems", "Memory", "HPC"],
-                          metrics: ["TYPE: DETERMINISTIC", "INFRA: SFF_WORKSTATION"],
-                          desc: "A deterministic memory framework focused on hardware constraints, memory-aligned execution, and maximum GPU utilization."
-                        },
-                        {
-                          title: "Safety Pod App",
-                          id: "proj_safety",
-                          tags: ["Mobile", "Safety", "Real-time"],
-                          metrics: ["SECTOR: SECURITY", "TECH: LOW_LATENCY"],
-                          desc: "Mobile ecosystem for personal security, utilizing real-time routing algorithms to ensure user safety in high-risk environments."
+                          tags: ["Quantum", "NISQ", "Surface_Codes"],
+                          metrics: ["PHASE: WORKING_PAPER", "SIM: STIM_PYMATCHING"],
+                          desc: "Derives purity-distinguishability bounds and Rényi-2 information witnesses for noisy NISQ channels; simulates logical correctability in the 'Undead Zone'."
                         }
                       ].map((p, idx) => (
                         <div key={p.id} className="relative group pl-8 md:pl-12 border-l border-white/10 hover:border-cyan-500/50 transition-colors py-4">
@@ -394,18 +422,30 @@ export default function PortfolioHome() {
                       </h2>
                       <div className="text-[10px] font-mono text-cyan-500/30 uppercase tracking-widest pl-6">Formal_Nodes</div>
                     </div>
-                    <div className="md:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div className="md:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="p-8 border-t border-cyan-500/50 bg-cyan-950/5 relative overflow-hidden group">
-                        <div className="absolute top-0 right-0 p-2 text-[10px] font-mono text-cyan-500/20 italic">0x_ACADEMY</div>
-                        <h4 className="text-xl font-bold text-white uppercase mb-2">Chandigarh University</h4>
-                        <div className="font-mono text-[10px] text-cyan-500 mb-4 tracking-widest">[ STATUS: DSR_REPRESENTATIVE ]</div>
-                        <p className="text-sm text-white/60 leading-relaxed">UID: 25BCS10109. B.Tech Computer Science core curriculum. Balancing academic rigor with independent HPC systems research.</p>
+                        <div className="absolute top-0 right-0 p-2 text-[10px] font-mono text-cyan-500/20 italic">0x_IEEE</div>
+                        <h4 className="text-xl font-bold text-white uppercase mb-2">IEEE CCNCPS 2026 Dubai</h4>
+                        <div className="font-mono text-[10px] text-yellow-400 mb-4 tracking-widest">[ BEST_STUDENT_PAPER & SESSION_CHAIR ]</div>
+                        <p className="text-sm text-white/60 leading-relaxed">FieldChain GPU-accelerated storage wire-speed integrity primitive published with Best Student Paper award.</p>
                       </div>
                       <div className="p-8 border-t border-cyan-500/50 bg-cyan-950/5 relative overflow-hidden group">
                         <div className="absolute top-0 right-0 p-2 text-[10px] font-mono text-cyan-500/20 italic">0x_VENTURE</div>
                         <h4 className="text-xl font-bold text-white uppercase mb-2">Emergent Ventures</h4>
                         <div className="font-mono text-[10px] text-cyan-400 mb-4 tracking-widest">[ FUNDING_CAPITAL: $5.5K ]</div>
-                        <p className="text-sm text-white/60 leading-relaxed">Recognized as a high-leverage asymmetric bet by Tyler Cowen. Awarded capital for signal-to-noise qubit research.</p>
+                        <p className="text-sm text-white/60 leading-relaxed">Awarded $5,500 research grant support for physics-constrained exoplanet candidate vetting on NASA TESS data.</p>
+                      </div>
+                      <div className="p-8 border-t border-cyan-500/50 bg-cyan-950/5 relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 p-2 text-[10px] font-mono text-cyan-500/20 italic">0x_ISRO_SIH</div>
+                        <h4 className="text-xl font-bold text-white uppercase mb-2">Tekathon 2026 (SIH Internal)</h4>
+                        <div className="font-mono text-[10px] text-green-400 mb-4 tracking-widest">[ 1ST_PLACE: SMART_VEHICLES ]</div>
+                        <p className="text-sm text-white/60 leading-relaxed">Winner in Smart Vehicles category for ISRO problem statement SIH26168. 4th Place globally in Hacktoberfest 2026.</p>
+                      </div>
+                      <div className="p-8 border-t border-cyan-500/50 bg-cyan-950/5 relative overflow-hidden group">
+                        <div className="absolute top-0 right-0 p-2 text-[10px] font-mono text-cyan-500/20 italic">0x_ACADEMY</div>
+                        <h4 className="text-xl font-bold text-white uppercase mb-2">Chandigarh University</h4>
+                        <div className="font-mono text-[10px] text-cyan-500 mb-4 tracking-widest">[ RESEARCH_EXCELLENCE_AWARD ]</div>
+                        <p className="text-sm text-white/60 leading-relaxed">UID: 25BCS10109. Department Student Representative (Tenure: Oct 2025 – Sep 2026, 400+ students). Awarded University Research Excellence Award.</p>
                       </div>
                     </div>
                   </motion.div>

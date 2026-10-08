@@ -6,37 +6,24 @@
       "type": "project",
       "level": 0,
       "parentId": null,
-      "description": "Research Engineer and Systems Architect specializing in High-Performance Computing (HPC), GPU acceleration (C++/CUDA), and Physics-Constrained Machine Learning. Currently targeting Developer Technology Engineer roles.",
+      "description": "Research Engineer and Systems Architect. Founder of Earthos Lab, Author of 'The AGI Question', creator of FieldChain, Writrieve, TARS, Navisense, and ModelVM. Specializes in hardware-sympathetic software, GPU computing (Vulkan/CUDA/C++), and cognitive architectures.",
       "position": [
-        0,
-        0,
-        0
+        0.0,
+        0.0,
+        0.0
       ]
     },
     {
-      "id": "cat_edu",
-      "title": "Education & Identity",
+      "id": "cat_startup",
+      "title": "Earthos Lab & Ventures",
       "type": "project",
       "level": 1,
       "parentId": "core",
-      "description": "Academic background and core identity. Balancing formal B.Tech Computer Science coursework with independent, grant-funded systems research.",
+      "description": "Deep-tech venture ecosystem founded by Roshan Kumar Gupta. Houses Earthos Lab (startup), Project Earthos (platform), Synapse Arch (cognitive substrate), and The AGI Question (monograph).",
       "position": [
-        3.464101615137755,
-        3.464101615137755,
-        3.464101615137755
-      ]
-    },
-    {
-      "id": "cat_exp",
-      "title": "Experience & Milestones",
-      "type": "project",
-      "level": 1,
-      "parentId": "core",
-      "description": "Key career milestones, internships, and awards. Highlights include securing venture funding, enterprise IT experience, and winning national hackathons.",
-      "position": [
-        -3.464101615137755,
-        -3.464101615137755,
-        3.464101615137755
+        -4.5,
+        5.0,
+        -3.0
       ]
     },
     {
@@ -45,11 +32,11 @@
       "type": "project",
       "level": 1,
       "parentId": "core",
-      "description": "Flagship engineering projects spanning GPU-accelerated storage, quantum computing research, and physics-constrained deep learning pipelines.",
+      "description": "Flagship engineering systems: FieldChain (166.86 GiB/s GPU storage), Writrieve (System-1 context engine), TARS (exoplanet recovery), Navisense (ISRO GNSS-denied navigation), and ModelVM (virtual memory for LLMs).",
       "position": [
-        -3.464101615137755,
-        3.464101615137755,
-        -3.464101615137755
+        -4.0,
+        -4.5,
+        4.0
       ]
     },
     {
@@ -58,11 +45,477 @@
       "type": "project",
       "level": 1,
       "parentId": "core",
-      "description": "Core technical stack and competencies. Focused on low-level systems programming, AI infrastructure, and 3D web architecture.",
+      "description": "Hardware-sympathetic stack: Low-level GPU systems (Vulkan, CUDA, PTX, C++), Physics-Constrained ML, Deterministic Runtimes, and Distributed Web Architecture.",
       "position": [
-        3.464101615137755,
-        -3.464101615137755,
-        -3.464101615137755
+        4.5,
+        -4.0,
+        -3.5
+      ]
+    },
+    {
+      "id": "cat_edu",
+      "title": "Education & Identity",
+      "type": "project",
+      "level": 1,
+      "parentId": "core",
+      "description": "Academic foundation and research leadership. B.Tech Computer Science at Chandigarh University, Department Student Representative (Oct 2025 \u2013 Sep 2026), and independent systems research.",
+      "position": [
+        4.0,
+        4.5,
+        3.5
+      ]
+    },
+    {
+      "id": "cat_exp",
+      "title": "Experience & Milestones",
+      "type": "project",
+      "level": 1,
+      "parentId": "core",
+      "description": "Research grants, enterprise engineering, hackathon championships, and upstream open-source contributions across Apache, CNCF, and Linux Foundation.",
+      "position": [
+        -2.0,
+        -5.0,
+        -4.0
+      ]
+    },
+    {
+      "id": "startup_earthoslab",
+      "title": "Earthos Lab (Startup)",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_startup",
+      "description": "The deep-tech research venture and startup founded by Roshan Kumar Gupta. Focuses on sovereign cognitive substrates, neuromorphic memory architectures, and hardware-sympathetic synthetic intelligence.",
+      "position": [
+        -8.5,
+        9.5,
+        -4.0
+      ],
+      "links": [
+        {
+          "label": "VENTURE_ROOT",
+          "url": "https://earthos.shop"
+        }
+      ]
+    },
+    {
+      "id": "proj_earthos",
+      "title": "Project Earthos (Platform)",
+      "type": "project",
+      "level": 2,
+      "parentId": "startup_earthoslab",
+      "description": "Production digital platform and interactive reader workspace deployed at earthos.shop. Built with Next.js 16, Supabase PostgreSQL, real-time edge telemetry, nearest-node multi-warehouse logistics, and sovereign reader sessions.",
+      "position": [
+        -13.5,
+        12.0,
+        -7.0
+      ],
+      "links": [
+        {
+          "label": "LIVE_DEPLOY",
+          "url": "https://earthos.shop"
+        }
+      ]
+    },
+    {
+      "id": "arch_synapse",
+      "title": "Synapse Arch (Cognitive Substrate)",
+      "type": "project",
+      "level": 2,
+      "parentId": "startup_earthoslab",
+      "description": "12-layer cognitive architecture and hardware-sympathetic execution substrate. Formalizes Memory Paging, Somatic Marker hypothesis, and Representation Darwinism with semi-permeable cognitive membranes (0.01 < \u03ba < 0.20).",
+      "position": [
+        -13.0,
+        7.0,
+        -9.5
+      ],
+      "links": [
+        {
+          "label": "ARCH_DOC",
+          "url": "https://github.com/rk-roshan-kr/Earthos"
+        }
+      ]
+    },
+    {
+      "id": "book_agi_question",
+      "title": "The AGI Question (Monograph)",
+      "type": "project",
+      "level": 2,
+      "parentId": "startup_earthoslab",
+      "description": "Foundational 14-chapter monograph authored by Roshan Kumar Gupta: 'The AGI Question: What Does It Take to Become a Mind?'. Critiques disembodied next-token prediction, explores Antonio Damasio's neurobiology, and charts synthetic consciousness.",
+      "position": [
+        -7.0,
+        13.5,
+        -1.5
+      ],
+      "links": [
+        {
+          "label": "MONOGRAPH_READER",
+          "url": "https://earthos.shop"
+        }
+      ]
+    },
+    {
+      "id": "book_ch01",
+      "title": "Ch 1: The Stateless Mind",
+      "type": "project",
+      "level": 3,
+      "parentId": "book_agi_question",
+      "description": "Critique of next-token prediction without temporal continuity. Why statistical linguistic mirrors lack cognitive understanding.",
+      "position": [
+        -1.5,
+        10.0,
+        -1.5
+      ]
+    },
+    {
+      "id": "book_ch02",
+      "title": "Ch 2: The Traveler Who Forgets",
+      "type": "project",
+      "level": 3,
+      "parentId": "book_agi_question",
+      "description": "The amnesia of stateless inference passes. Investigates why continuous inner monologue and memory consolidation are necessary for a mind.",
+      "position": [
+        -0.69,
+        10.55,
+        1.54
+      ]
+    },
+    {
+      "id": "book_ch03",
+      "title": "Ch 3: The Map That Can't See Itself",
+      "type": "project",
+      "level": 3,
+      "parentId": "book_agi_question",
+      "description": "Metacognitive recursive loops. Why an agent must model its own observation and reasoning process, not merely the external world.",
+      "position": [
+        -3.57,
+        11.1,
+        2.8
+      ]
+    },
+    {
+      "id": "book_ch04",
+      "title": "Ch 4: The Belief Engine",
+      "type": "project",
+      "level": 3,
+      "parentId": "book_agi_question",
+      "description": "Epistemic grounding vs conversational sycophancy. Formalizes Bayesian belief updating against empirical reality.",
+      "position": [
+        -5.44,
+        11.65,
+        5.32
+      ]
+    },
+    {
+      "id": "book_ch05",
+      "title": "Ch 5: The Drawer That Jams",
+      "type": "project",
+      "level": 3,
+      "parentId": "book_agi_question",
+      "description": "Associative memory retrieval bottlenecks. Analyzes vector collision degradation, memory paging, and interference in high-dimensional latent spaces.",
+      "position": [
+        -8.22,
+        12.2,
+        3.86
+      ]
+    },
+    {
+      "id": "book_ch06",
+      "title": "Ch 6: Before You Act",
+      "type": "project",
+      "level": 3,
+      "parentId": "book_agi_question",
+      "description": "Pre-motor counterfactual simulation engines. How a cognitive agent evaluates branching action trajectories before committing physical energy.",
+      "position": [
+        -11.36,
+        12.75,
+        3.97
+      ]
+    },
+    {
+      "id": "book_ch07",
+      "title": "Ch 7: The Budget of a Mind",
+      "type": "project",
+      "level": 3,
+      "parentId": "book_agi_question",
+      "description": "Homeostatic regulation and metabolic resource limits. Why vulnerability, energy budgets, and mortality are foundational to intelligence.",
+      "position": [
+        -11.96,
+        13.3,
+        0.89
+      ]
+    },
+    {
+      "id": "book_ch08",
+      "title": "Ch 8: What the Stage Manager Does",
+      "type": "project",
+      "level": 3,
+      "parentId": "book_agi_question",
+      "description": "Attentional arbitration and executive control networks. How the mind directs focus across multi-stream sensory inputs.",
+      "position": [
+        -14.0,
+        13.85,
+        -1.5
+      ]
+    },
+    {
+      "id": "book_ch09",
+      "title": "Ch 9: Minds Within Minds",
+      "type": "project",
+      "level": 3,
+      "parentId": "book_agi_question",
+      "description": "Hierarchical multi-agent internal sub-processes. Modeling competing cognitive drives and internal consensus formation.",
+      "position": [
+        -11.96,
+        14.4,
+        -3.89
+      ]
+    },
+    {
+      "id": "book_ch10",
+      "title": "Ch 10: Interior Weather",
+      "type": "project",
+      "level": 3,
+      "parentId": "book_agi_question",
+      "description": "Antonio Damasio's Somatic Marker hypothesis and the Paradox of Elliot. Why emotion and visceral gut-checks are indispensable to rational choice.",
+      "position": [
+        -11.36,
+        14.95,
+        -6.97
+      ]
+    },
+    {
+      "id": "book_ch11",
+      "title": "Ch 11: The Examined Mind",
+      "type": "project",
+      "level": 3,
+      "parentId": "book_agi_question",
+      "description": "Autonomous error-monitoring circuits and reflective equilibrium. Detecting and repairing internal logical and sensory contradictions.",
+      "position": [
+        -8.22,
+        15.5,
+        -6.86
+      ]
+    },
+    {
+      "id": "book_ch12",
+      "title": "Ch 12: The Memory That Holds",
+      "type": "project",
+      "level": 3,
+      "parentId": "book_agi_question",
+      "description": "Synaptic structural memory consolidation and sleep-phase replay. How acute working memory stabilizes into enduring world knowledge.",
+      "position": [
+        -5.44,
+        16.05,
+        -8.32
+      ]
+    },
+    {
+      "id": "book_ch13",
+      "title": "Ch 13: The Friction That Keeps Us Honest",
+      "type": "project",
+      "level": 3,
+      "parentId": "book_agi_question",
+      "description": "Physical embodiment resistance and the semi-permeable cognitive membrane (0.01 < \u03ba < 0.20). Surviving environmental noise without structural collapse.",
+      "position": [
+        -3.57,
+        16.6,
+        -5.8
+      ]
+    },
+    {
+      "id": "book_ch14",
+      "title": "Ch 14: Towards the Horizon",
+      "type": "project",
+      "level": 3,
+      "parentId": "book_agi_question",
+      "description": "The synthetic consciousness roadmap. Formalizing substrate-independent minds, sovereign cognitive architectures, and artificial life.",
+      "position": [
+        -0.69,
+        17.15,
+        -4.54
+      ]
+    },
+    {
+      "id": "concept_somatic_markers",
+      "title": "Antonio Damasio: Somatic Markers",
+      "type": "skill",
+      "level": 3,
+      "parentId": "arch_synapse",
+      "description": "Visceral bias signals generated by the ventromedial prefrontal cortex (vmPFC). Prunes infinite combinatorial search spaces into computationally tractable decisions.",
+      "position": [
+        -17.0,
+        9.5,
+        -9.0
+      ]
+    },
+    {
+      "id": "concept_elliot_paradox",
+      "title": "The Paradox of Elliot (vmPFC)",
+      "type": "skill",
+      "level": 3,
+      "parentId": "arch_synapse",
+      "description": "Patient Elliot exhibited superior IQ, intact grammar, and perfect logic, yet was paralyzed in real-world decisions due to lack of emotional somatic markers. Proof that reason requires visceral emotion.",
+      "position": [
+        -18.5,
+        7.5,
+        -11.0
+      ]
+    },
+    {
+      "id": "concept_membrane",
+      "title": "Semi-Permeable Cognitive Membrane",
+      "type": "skill",
+      "level": 3,
+      "parentId": "arch_synapse",
+      "description": "Mathematical cognitive boundary (permeability 0.01 < \u03ba < 0.20). Balances structural memory retention against environmental noise and reward exploitation.",
+      "position": [
+        -15.0,
+        5.0,
+        -12.0
+      ]
+    },
+    {
+      "id": "concept_representation_darwinism",
+      "title": "Representation Darwinism",
+      "type": "skill",
+      "level": 3,
+      "parentId": "arch_synapse",
+      "description": "Survival law for internal world models: representations survive gradient optimization only if they actively support homeostatic balance against entropy.",
+      "position": [
+        -13.5,
+        3.5,
+        -10.5
+      ]
+    },
+    {
+      "id": "concept_homeostasis",
+      "title": "Homeostatic Error Budgets",
+      "type": "skill",
+      "level": 3,
+      "parentId": "arch_synapse",
+      "description": "Substrate-independent homeostatic error budgets over compute, memory, latency, and predictive uncertainty. Gives synthetic systems existential stakes.",
+      "position": [
+        -11.0,
+        3.0,
+        -8.0
+      ]
+    },
+    {
+      "id": "concept_metacognition",
+      "title": "Metacognitive Self-Modeling",
+      "type": "skill",
+      "level": 3,
+      "parentId": "arch_synapse",
+      "description": "Recursive internal observers that model the agent's own reasoning process and error confidence rather than passively predicting tokens.",
+      "position": [
+        -9.0,
+        4.5,
+        -6.5
+      ]
+    },
+    {
+      "id": "concept_episodic_memory",
+      "title": "Episodic Memory Paging",
+      "type": "skill",
+      "level": 3,
+      "parentId": "arch_synapse",
+      "description": "Multi-tier memory architecture decoupling working context from permanent episodic stores via semantic indexing and decay weighting.",
+      "position": [
+        -15.5,
+        11.5,
+        -5.5
+      ]
+    },
+    {
+      "id": "concept_counterfactuals",
+      "title": "Pre-Motor Counterfactual Simulation",
+      "type": "skill",
+      "level": 3,
+      "parentId": "arch_synapse",
+      "description": "Simulation engine modeling alternative action trajectories before physical actuation, pruning high-risk paths using somatic marker heuristics.",
+      "position": [
+        -16.0,
+        8.0,
+        -7.5
+      ]
+    },
+    {
+      "id": "concept_epistemic_grounding",
+      "title": "Epistemic Grounding",
+      "type": "skill",
+      "level": 3,
+      "parentId": "arch_synapse",
+      "description": "Truth-anchored verification distinguishing reality from persuasive hallucinations and user sycophancy.",
+      "position": [
+        -5.5,
+        15.0,
+        1.0
+      ]
+    },
+    {
+      "id": "concept_executive_attention",
+      "title": "Executive Attentional Control",
+      "type": "skill",
+      "level": 3,
+      "parentId": "arch_synapse",
+      "description": "Dynamic arbitration mechanism managing sensory bandwidth and multi-modal attention focus.",
+      "position": [
+        -4.0,
+        16.0,
+        2.5
+      ]
+    },
+    {
+      "id": "concept_hierarchical_agency",
+      "title": "Hierarchical Multi-Agency",
+      "type": "skill",
+      "level": 3,
+      "parentId": "arch_synapse",
+      "description": "Sub-agent specialization and internal dialogue modeled as a society of cooperating processes.",
+      "position": [
+        -2.5,
+        17.0,
+        3.5
+      ]
+    },
+    {
+      "id": "concept_error_monitoring",
+      "title": "Reflective Error Monitoring",
+      "type": "skill",
+      "level": 3,
+      "parentId": "arch_synapse",
+      "description": "Internal supervisory loops monitoring contradiction, divergence, and uncertainty across inference passes.",
+      "position": [
+        -1.0,
+        16.5,
+        4.5
+      ]
+    },
+    {
+      "id": "concept_synaptic_consolidation",
+      "title": "Synaptic Structural Consolidation",
+      "type": "skill",
+      "level": 3,
+      "parentId": "arch_synapse",
+      "description": "Long-term structural memory replay stabilizing transient observations into resilient network priors.",
+      "position": [
+        -0.5,
+        15.0,
+        5.5
+      ]
+    },
+    {
+      "id": "concept_synthetic_consciousness",
+      "title": "Synthetic Consciousness Roadmap",
+      "type": "skill",
+      "level": 3,
+      "parentId": "arch_synapse",
+      "description": "Substrate-independent framework integrating homeostasis, somatic valuation, and self-referential modeling.",
+      "position": [
+        1.0,
+        14.0,
+        6.0
       ]
     },
     {
@@ -71,56 +524,131 @@
       "type": "project",
       "level": 2,
       "parentId": "cat_proj",
-      "description": "A GPU-accelerated storage integrity system for NVMe arrays. Uses custom CUDA/Vulkan kernels to validate cryptographic data at 166.86 GiB/s, bypassing CPU bottlenecks.",
-      "links": [
-        { "label": "GITHUB_REPOS", "url": "https://github.com/rk-roshan-kr/FieldChain" }
-      ],
+      "description": "Wire-speed GPU storage integrity layer delivering 166.86 GiB/s peak bandwidth on Vulkan compute and 41.28 GiB/s over PCIe 4.0. Best Student Paper Award at IEEE CCNCPS 2026 Dubai.",
       "position": [
-        -4.609326316431508,
-        12.290576418298365,
-        -2.129259702131759
+        -9.5,
+        -4.5,
+        7.5
+      ],
+      "links": [
+        {
+          "label": "IEEE_PAPER",
+          "url": "https://github.com/rk-roshan-kr/FieldChain"
+        }
       ]
     },
     {
-      "id": "proj_roshan_arch",
-      "title": "Roshan Architecture",
+      "id": "proj_writrieve",
+      "title": "Writrieve System-1 Engine",
       "type": "project",
       "level": 2,
       "parentId": "cat_proj",
-      "description": "A deterministic memory framework and architectural philosophy focused on hardware constraints, memory-aligned execution, and Small Form Factor (SFF) workstation optimization.",
+      "description": "Personal context engine using Laya 421M System-1 gates to filter 95.5% of prompt noise in 1.7ms. 460ms end-to-end latency, 98% factual grounding.",
       "position": [
-        -4.897365084416144,
-        12.197213718369444,
-        -5.1007166645676
+        -7.5,
+        -8.0,
+        6.0
+      ],
+      "links": [
+        {
+          "label": "GITHUB",
+          "url": "https://github.com/rk-roshan-kr/writrieve"
+        }
       ]
     },
     {
       "id": "proj_tars",
-      "title": "Project TARS API",
+      "title": "Project TARS Exoplanet Recovery",
       "type": "project",
       "level": 2,
       "parentId": "cat_proj",
-      "description": "A physics-constrained machine learning pipeline that processes NASA TESS data to discover exoplanets. Funded by a $5,500 grant from Emergent Ventures.",
-      "links": [
-        { "label": "GITHUB_REPOS", "url": "https://github.com/rk-roshan-kr/Tars" }
-      ],
+      "description": "Physics-constrained exoplanet detection engine securing a $5,500 Emergent Ventures grant. Recovers noisy transits from NASA TESS light curves using BLS and Mandel & Agol MCMC.",
       "position": [
-        -6.224144381871175,
-        0.6746656303236991,
-        -11.563559054523862
+        -5.0,
+        -9.5,
+        8.5
+      ],
+      "links": [
+        {
+          "label": "GRANT_DETAILS",
+          "url": "https://tars.earth"
+        }
       ]
     },
     {
-      "id": "proj_quanta",
-      "title": "QUANTA Thesis",
+      "id": "proj_navisense",
+      "title": "Navisense IDR (ISRO 1st Place)",
       "type": "project",
       "level": 2,
       "parentId": "cat_proj",
-      "description": "Research initiative and paper defining an experimental law for the signal-to-noise limit of qubits in quantum computing. Drafted under academic mentorship.",
+      "description": "GNSS-denied inertial dead reckoning system winning 1st Place for ISRO PS SIH26168. ES-EKF with Zero Velocity Updates (ZUPT) and Non-Holonomic Constraints; drift < 12.3m over 1.2km.",
       "position": [
-        -11.919990637441414,
-        4.937188324078005,
-        -6.174426239027718
+        -2.5,
+        -9.0,
+        9.5
+      ],
+      "links": [
+        {
+          "label": "ISRO_SYSTEM",
+          "url": "https://navisense-idr-sih.netlify.app"
+        }
+      ]
+    },
+    {
+      "id": "proj_modelvm",
+      "title": "ModelVM Virtual Substrate",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_proj",
+      "description": "Virtual memory substrate for LLMs. 52-page ACM TOCS preprint. Runs 52.7 GB 10-specialist library within strict 8.0 GB envelope; cuts latency by 77.2% via Cognitive State Packets (CSP).",
+      "position": [
+        -8.0,
+        -2.0,
+        9.0
+      ],
+      "links": [
+        {
+          "label": "ACM_PREPRINT",
+          "url": "https://github.com/rk-roshan-kr/modelvm"
+        }
+      ]
+    },
+    {
+      "id": "proj_patentzero",
+      "title": "Patent-Zero ZK Auditor",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_proj",
+      "description": "Zero-knowledge IP novelty verification using Tree-Sitter AST semantic hashing. Generates cryptographic inclusion proofs without exposing proprietary source code.",
+      "position": [
+        -4.0,
+        -2.5,
+        11.0
+      ],
+      "links": [
+        {
+          "label": "SYSTEM_REPO",
+          "url": "https://github.com/rk-roshan-kr"
+        }
+      ]
+    },
+    {
+      "id": "proj_worldring",
+      "title": "WorldRing 4D Reality Engine",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_proj",
+      "description": "Continuous 4D spatiotemporal coordinate system for real-time physics environments, eliminating discrete spatial chunk boundaries.",
+      "position": [
+        -6.0,
+        -6.5,
+        11.5
+      ],
+      "links": [
+        {
+          "label": "EXPERIMENT",
+          "url": "https://github.com/rk-roshan-kr"
+        }
       ]
     },
     {
@@ -129,444 +657,17 @@
       "type": "project",
       "level": 2,
       "parentId": "cat_proj",
-      "description": "A decentralized Web3 Treasury and DeFi Investment Manager. Won the ZeroToOne Hackathon by providing a seamless UI for managing decentralized assets.",
-      "links": [
-        { "label": "LIVE_DEPLOY", "url": "https://cryptic-webapp.netlify.app" },
-        { "label": "GITHUB_REPOS", "url": "https://github.com/rk-roshan-kr/dao-treasury-dashboard" }
-      ],
+      "description": "ZeroToOne Hackathon Winner. High-performance DeFi Treasury interface with 3D spatial asset visualization, WebGL shaders, and multi-sig state synchronization.",
       "position": [
-        -10.306595557500616,
-        9.156735577914903,
-        -2.132112420525542
-      ]
-    },
-    {
-      "id": "proj_safety",
-      "title": "Safety Pod App",
-      "type": "project",
-      "level": 2,
-      "parentId": "cat_proj",
-      "description": "A mobile-first ecosystem concept designed for personal security, utilizing low-latency signaling and real-time routing algorithms.",
-      "position": [
-        -10.774972931451797,
-        6.522045196896527,
-        -7.732361778660265
-      ]
-    },
-    {
-      "id": "skill_sys",
-      "title": "High-Performance Systems",
-      "type": "skill",
-      "level": 2,
-      "parentId": "cat_skills",
-      "description": "Low-level programming in C/C++, CUDA, and Vulkan. Focused on memory optimization, parallel threading, and maximizing GPU hardware utilization.",
-      "position": [
-        2.6600709860024905,
-        -7.497950031838,
-        -11.469200096636735
-      ]
-    },
-    {
-      "id": "skill_physics",
-      "title": "Physics-Constrained ML",
-      "type": "skill",
-      "level": 2,
-      "parentId": "cat_skills",
-      "description": "Designing neural networks that are constrained by actual physical laws (like orbital mechanics) rather than just statistical pattern matching.",
-      "position": [
-        5.108085315847548,
-        -12.187851601963285,
-        -1.9830534190407785
-      ]
-    },
-    {
-      "id": "skill_ai",
-      "title": "AI Infrastructure",
-      "type": "skill",
-      "level": 2,
-      "parentId": "cat_skills",
-      "description": "Building and deploying AI infrastructure, including Retrieval-Augmented Generation (RAG) pipelines, vector databases, and local Large Language Models (LLMs).",
-      "position": [
-        9.499804471381616,
-        -9.723909966410014,
-        -5.784681378143494
-      ]
-    },
-    {
-      "id": "skill_web",
-      "title": "Web & UI Architecture",
-      "type": "skill",
-      "level": 2,
-      "parentId": "cat_skills",
-      "description": "Developing immersive 3D web interfaces using React, WebGL, and Three.js to visualize complex data structures and neural network architectures.",
-      "position": [
-        11.045000992313513,
-        -1.1614685245900955,
-        -7.733509710348512
-      ]
-    },
-    {
-      "id": "edu_btech",
-      "title": "B.Tech Computer Science",
-      "type": "skill",
-      "level": 2,
-      "parentId": "cat_edu",
-      "description": "Currently pursuing a B.Tech in Computer Science (UID: 25BCS10109), maintaining a strong academic foundation while serving as Department Student Representative.",
-      "position": [
-        0.7437606078875674,
-        11.157758235872562,
-        7.259808743789344
-      ]
-    },
-    {
-      "id": "edu_uni",
-      "title": "Chandigarh University",
-      "type": "skill",
-      "level": 2,
-      "parentId": "cat_edu",
-      "description": "Balancing rigorous university coursework at Chandigarh University with independent, bleeding-edge research in high-performance computing.",
-      "position": [
-        2.2733526266084914,
-        5.019576342137311,
-        12.248326977682945
-      ]
-    },
-    {
-      "id": "exp_lt",
-      "title": "L&T Intern",
-      "type": "skill",
-      "level": 2,
-      "parentId": "cat_exp",
-      "description": "Navigating enterprise-scale engineering operations. Managed high-level IT infrastructure, networking, and systems support for an enterprise environment.",
-      "position": [
-        -6.728815098001732,
-        -11.764899272213855,
-        2.2647667448508617
-      ]
-    },
-    {
-      "id": "award_ev",
-      "title": "Emergent Ventures Grantee",
-      "type": "skill",
-      "level": 2,
-      "parentId": "cat_exp",
-      "description": "Awarded a competitive $5,500 grant from Emergent Ventures (recognized by Tyler Cowen) to fund independent research and hardware for Project TARS.",
-      "position": [
-        -5.092789297955058,
-        -8.829883676260792,
-        10.503686780782774
-      ]
-    },
-    {
-      "id": "concept_cuda",
-      "title": "CUDA Multi-Threading",
-      "type": "skill",
-      "level": 3,
-      "parentId": "proj_fieldchain",
-      "description": "Utilizing direct warp scheduling and memory-aligned execution in CUDA to achieve maximum parallel processing efficiency on NVIDIA GPUs.",
-      "position": [
-        -7.3631844489248905,
-        15.427883667472734,
-        0.6227520366473493
-      ]
-    },
-    {
-      "id": "concept_pcie",
-      "title": "PCIe 4.0 Streaming",
-      "type": "skill",
-      "level": 3,
-      "parentId": "proj_fieldchain",
-      "description": "Optimizing data pipelines to saturate PCIe Gen4 theoretical bandwidth limits, enabling zero-copy data streaming for massive datasets.",
-      "position": [
-        -4.3990793940022055,
-        15.34914633850816,
-        -6.079063023158877
-      ]
-    },
-    {
-      "id": "sys_memory",
-      "title": "Advanced Memory Mgmt",
-      "type": "skill",
-      "level": 3,
-      "parentId": "proj_roshan_arch",
-      "description": "Transitioning memory layouts from Array of Structures (AoS) to Structure of Arrays (SoA) to eliminate warp divergence and improve GPU cache hit rates.",
-      "position": [
-        -8.176168326414436,
-        13.984880296654143,
-        -8.425426803082742
-      ]
-    },
-    {
-      "id": "sys_deterministic",
-      "title": "Deterministic Runtimes",
-      "type": "skill",
-      "level": 3,
-      "parentId": "proj_roshan_arch",
-      "description": "Writing predictive, bounded execution flows in C++ that guarantee stable memory allocation and exact execution times.",
-      "position": [
-        -7.639246642843823,
-        16.362047851805244,
-        -5.469826621792101
-      ]
-    },
-    {
-      "id": "data_tess",
-      "title": "NASA TESS Light Curves",
-      "type": "skill",
-      "level": 3,
-      "parentId": "proj_tars",
-      "description": "Processing massive, noisy time-series photometric data from the NASA TESS mission to extract valid exoplanet transit signals.",
-      "position": [
-        -9.723082015483524,
-        2.133093714649922,
-        -14.823991994938334
-      ]
-    },
-    {
-      "id": "concept_exoplanet",
-      "title": "Exoplanet Iterations",
-      "type": "skill",
-      "level": 3,
-      "parentId": "proj_tars",
-      "description": "Applying physical constraints of celestial mechanics and orbital geometry to validate exoplanet candidates and reject false positives.",
-      "position": [
-        -5.244768793307617,
-        0.012198191317334794,
-        -16.42174393663592
-      ]
-    },
-    {
-      "id": "concept_simd",
-      "title": "SIMD Instructions",
-      "type": "skill",
-      "level": 3,
-      "parentId": "skill_sys",
-      "description": "Leveraging Single Instruction, Multiple Data (SIMD) pipelines to process large blocks of cryptographic data simultaneously.",
-      "position": [
-        1.0395343800020145,
-        -11.181518227518751,
-        -14.436553539754307
-      ]
-    },
-    {
-      "id": "concept_warp",
-      "title": "Warp Scheduling",
-      "type": "skill",
-      "level": 3,
-      "parentId": "skill_sys",
-      "description": "Managing GPU thread blocks (warps) to ensure continuous, non-divergent execution and maximum hardware utilization.",
-      "position": [
-        4.429285881808379,
-        -11.225908519699612,
-        -14.48845778770358
-      ]
-    },
-    {
-      "id": "concept_cpp",
-      "title": "C / C++",
-      "type": "skill",
-      "level": 3,
-      "parentId": "skill_sys",
-      "description": "High-performance systems programming focusing on pointer arithmetic, manual memory management, and optimizing cache line boundaries.",
-      "position": [
-        3.9349275334691063,
-        -12.318588910054984,
-        -11.838227994233108
-      ]
-    },
-    {
-      "id": "concept_vulkan",
-      "title": "Vulkan Pipelines",
-      "type": "skill",
-      "level": 3,
-      "parentId": "skill_sys",
-      "description": "Using custom Vulkan compute shaders to bind arithmetic directly to memory pipelines, avoiding standard driver overhead.",
-      "position": [
-        6.485940500536781,
-        -10.243448479767524,
-        -13.461353095279406
-      ]
-    },
-    {
-      "id": "concept_pytorch",
-      "title": "PyTorch",
-      "type": "skill",
-      "level": 3,
-      "parentId": "skill_physics",
-      "description": "Building and training deep learning models, specifically designing custom loss functions that penalize physically impossible outputs.",
-      "position": [
-        7.7260066963032905,
-        -14.986659756943201,
-        1.4106861517586753
-      ]
-    },
-    {
-      "id": "concept_tensors",
-      "title": "Tensor Operations",
-      "type": "skill",
-      "level": 3,
-      "parentId": "skill_physics",
-      "description": "Mapping high-dimensional data into optimized tensor structures for fast, hardware-accelerated matrix multiplication.",
-      "position": [
-        6.439181623948256,
-        -16.321148502980552,
-        -4.508841112366702
-      ]
-    },
-    {
-      "id": "concept_backprop",
-      "title": "Backpropagation",
-      "type": "skill",
-      "level": 3,
-      "parentId": "skill_physics",
-      "description": "Implementing custom backpropagation logic to correct neural networks based on physical boundary constraints rather than just statistical error.",
-      "position": [
-        8.604969285318877,
-        -15.338480216896281,
-        -3.7383043868441845
-      ]
-    },
-    {
-      "id": "concept_pinns",
-      "title": "Physics-Informed NNs",
-      "type": "skill",
-      "level": 3,
-      "parentId": "skill_physics",
-      "description": "Physics-Informed Neural Networks. Integrating differential equations into the training process to solve complex scientific problems.",
-      "position": [
-        5.733748291777815,
-        -16.394992993053854,
-        0.8652469290549063
-      ]
-    },
-    {
-      "id": "concept_llm",
-      "title": "Large Language Models",
-      "type": "skill",
-      "level": 3,
-      "parentId": "skill_ai",
-      "description": "Integrating Large Language Models into local pipelines for unstructured data parsing and semantic reasoning tasks.",
-      "position": [
-        12.073737471219024,
-        -13.593325809217323,
-        -3.8462361011683956
-      ]
-    },
-    {
-      "id": "concept_rag",
-      "title": "RAG Architecture",
-      "type": "skill",
-      "level": 3,
-      "parentId": "skill_ai",
-      "description": "Building Retrieval-Augmented Generation (RAG) architectures to ground AI responses in factual, domain-specific engineering data.",
-      "position": [
-        14.281854999529124,
-        -10.474143530755086,
-        -4.264938175034513
-      ]
-    },
-    {
-      "id": "concept_vector",
-      "title": "Vector Embeddings",
-      "type": "skill",
-      "level": 3,
-      "parentId": "skill_ai",
-      "description": "Implementing vector databases and embedding models to enable sub-millisecond semantic search and data retrieval.",
-      "position": [
-        13.719808195472526,
-        -12.604193231232543,
-        -5.446882193821211
-      ]
-    },
-    {
-      "id": "concept_react",
-      "title": "React.js",
-      "type": "skill",
-      "level": 3,
-      "parentId": "skill_web",
-      "description": "Using React.js to manage complex state and build dynamic user interfaces that sit on top of heavy 3D WebGL canvases.",
-      "position": [
-        15.180570157155671,
-        -3.4990600878076896,
-        -9.513075343734608
-      ]
-    },
-    {
-      "id": "concept_webgl",
-      "title": "WebGL",
-      "type": "skill",
-      "level": 3,
-      "parentId": "skill_web",
-      "description": "Accessing low-level GPU rendering pipelines in the browser to build high-performance 3D data visualizations.",
-      "position": [
-        11.666354032835372,
-        -4.247576972729318,
-        -11.618075972540208
-      ]
-    },
-    {
-      "id": "concept_three",
-      "title": "Three.js",
-      "type": "skill",
-      "level": 3,
-      "parentId": "skill_web",
-      "description": "Utilizing Three.js to translate complex mathematical backend graphs into interactive, spatial 3D environments.",
-      "position": [
-        16.08116200622647,
-        -1.6793465289795113,
-        -8.054453773482708
-      ]
-    },
-    {
-      "id": "concept_gf_math",
-      "title": "GF(2^31-1) Prime Math",
-      "type": "skill",
-      "level": 3,
-      "parentId": "proj_fieldchain",
-      "description": "Applying GF(2^31-1) Prime field mathematics to optimize cryptographic packing and avoid modulus bias in data storage.",
-      "position": [
-        -5.5,
-        14.2,
-        -6.1
-      ]
-    },
-    {
-      "id": "concept_eea",
-      "title": "Event Evidence Aggregator",
-      "type": "skill",
-      "level": 3,
-      "parentId": "proj_tars",
-      "description": "Developed the Event Evidence Aggregator, an algorithm to compare transit shapes and stabilize signal detection in sparse datasets.",
-      "position": [
-        -5.5,
-        3.2,
-        -15.1
-      ]
-    },
-    {
-      "id": "concept_echo",
-      "title": "ECHO Physics Validator",
-      "type": "skill",
-      "level": 3,
-      "parentId": "proj_tars",
-      "description": "Built the ECHO Physics Validator, a heuristic system that rejects >91% of false-positive periodic signals by enforcing solid-body physics.",
-      "position": [
+        -1.0,
         -7.5,
-        -0.2,
-        -14.1
-      ]
-    },
-    {
-      "id": "concept_sff",
-      "title": "SFF Hardware Builds",
-      "type": "skill",
-      "level": 3,
-      "parentId": "proj_roshan_arch",
-      "description": "Designing and building custom Small Form Factor (SFF) workstations to maximize local compute power for AI and systems development.",
-      "position": [
-        -9.5,
-        15.2,
-        -4.1
+        7.5
+      ],
+      "links": [
+        {
+          "label": "HACKATHON_WIN",
+          "url": "https://cryptic-webapp.netlify.app"
+        }
       ]
     },
     {
@@ -575,326 +676,918 @@
       "type": "project",
       "level": 2,
       "parentId": "cat_proj",
-      "description": "Developed HSA*, a proprietary, highly optimized pathfinding algorithm designed for real-time, safety-aware navigation. Peaked at 97\u00b5s path calculation.",
+      "description": "Hierarchical Spatial A* routing algorithm delivering 140x faster pathfinding than standard Dijkstra through quadtree hierarchical decomposition and heuristic caching.",
       "position": [
-        -7.5,
-        10.2,
-        -3.1
+        -10.0,
+        -6.5,
+        4.0
       ]
     },
     {
-      "id": "concept_geometric_loss",
-      "title": "Geometric Loss Functions",
+      "id": "proj_safety",
+      "title": "Safety Pod App",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_proj",
+      "description": "Zinnovatio Hackathon Winner. Edge telemetry, offline mesh networking, and rapid emergency dispatch coordinate system for remote industrial campuses.",
+      "position": [
+        -3.0,
+        -11.0,
+        6.0
+      ],
+      "links": [
+        {
+          "label": "SAFETY_APP",
+          "url": "https://safety-pod.netlify.app"
+        }
+      ]
+    },
+    {
+      "id": "proj_trash2cash",
+      "title": "Trash2Cash Circular Logistics",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_proj",
+      "description": "Automated reverse logistics marketplace connecting recyclable waste generators to processing plants using automated pricing heuristics.",
+      "position": [
+        -1.5,
+        -9.5,
+        4.5
+      ]
+    },
+    {
+      "id": "proj_roshan_arch",
+      "title": "Roshan Architecture",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_proj",
+      "description": "Personal hardware-sympathetic engineering doctrine: memory coalescing, deterministic runtimes, and low-level mechanical sympathy.",
+      "position": [
+        -6.5,
+        -0.5,
+        7.0
+      ]
+    },
+    {
+      "id": "skill_sys",
+      "title": "High-Performance Systems",
+      "type": "skill",
+      "level": 2,
+      "parentId": "cat_skills",
+      "description": "Low-level systems programming: Vulkan Compute, CUDA, PTX, C++, Structure-of-Arrays (SoA) layout, cache-conscious algorithms, and custom kernel tuning.",
+      "position": [
+        8.5,
+        -3.5,
+        -4.5
+      ]
+    },
+    {
+      "id": "skill_physics",
+      "title": "Physics-Constrained ML",
+      "type": "skill",
+      "level": 2,
+      "parentId": "cat_skills",
+      "description": "Embedding physical conservation laws into neural networks. Hamiltonian mechanics, differential equations, and noise-tolerant astronomy pipelines.",
+      "position": [
+        7.0,
+        -6.5,
+        -2.5
+      ]
+    },
+    {
+      "id": "skill_ai",
+      "title": "AI Infrastructure",
+      "type": "skill",
+      "level": 2,
+      "parentId": "cat_skills",
+      "description": "Deterministic model serving, WebGPU serverless inference, speculative decoding, parameter quantization, and cognitive state packet streaming.",
+      "position": [
+        9.5,
+        -1.5,
+        -6.0
+      ]
+    },
+    {
+      "id": "skill_web",
+      "title": "Web & UI Architecture",
+      "type": "skill",
+      "level": 2,
+      "parentId": "cat_skills",
+      "description": "Next.js 16, React 19, Three.js, React Three Fiber, WebGL, custom GLSL compute/fragment shaders, and high-framerate interactive client runtimes.",
+      "position": [
+        6.0,
+        -6.0,
+        -5.5
+      ]
+    },
+    {
+      "id": "concept_cuda",
+      "title": "CUDA & PTX Assembly",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_sys",
+      "description": "Raw CUDA kernels, warp primitives, shared memory banking, and PTX inline assembly.",
+      "position": [
+        11.5,
+        -4.5,
+        -5.0
+      ]
+    },
+    {
+      "id": "concept_vulkan",
+      "title": "Vulkan Compute Pipelines",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_sys",
+      "description": "SPIR-V compute shaders, explicit pipeline barriers, and multi-queue dispatch for wire-speed GPU compute.",
+      "position": [
+        12.0,
+        -2.5,
+        -6.5
+      ]
+    },
+    {
+      "id": "concept_cpp",
+      "title": "Modern C++ (C++20/23)",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_sys",
+      "description": "Zero-cost abstractions, RAII, move semantics, template metaprogramming, and cache-conscious data structures.",
+      "position": [
+        10.5,
+        -6.0,
+        -3.5
+      ]
+    },
+    {
+      "id": "concept_simd",
+      "title": "SIMD & Warp Scheduling",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_sys",
+      "description": "AVX-512, NEON vectorization, warp shuffle instructions, and divergence minimization.",
+      "position": [
+        13.0,
+        -1.0,
+        -4.0
+      ]
+    },
+    {
+      "id": "sys_memory",
+      "title": "Advanced Memory Mgmt",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_sys",
+      "description": "Custom arena allocators, slab allocators, zero-copy DMA buffers, and NUMA-aware paging.",
+      "position": [
+        9.5,
+        -7.5,
+        -4.5
+      ]
+    },
+    {
+      "id": "sys_deterministic",
+      "title": "Deterministic Runtimes",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_sys",
+      "description": "Lock-free ring buffers, single-threaded cooperative event loops, and replayable execution traces.",
+      "position": [
+        11.0,
+        -8.0,
+        -2.5
+      ]
+    },
+    {
+      "id": "concept_pytorch",
+      "title": "PyTorch Core",
       "type": "skill",
       "level": 3,
       "parentId": "skill_physics",
-      "description": "Creating custom geometric loss functions that penalize machine learning models when they violate known mathematical and physical laws.",
+      "description": "Custom C++/CUDA autograd extensions, distributed data parallel, and quantized model graphs.",
       "position": [
-        4.5,
-        -15.2,
-        3.1
+        8.5,
+        -9.0,
+        -1.5
       ]
     },
     {
-      "id": "phil_selective_depth",
-      "title": "Selective Depth Acquisition",
+      "id": "concept_pinns",
+      "title": "Physics-Informed NNs",
       "type": "skill",
-      "level": 2,
-      "parentId": "core",
-      "description": "A cognitive methodology of acquiring deep technical mastery just-in-time to solve high-leverage bottlenecks. Focuses on capability over academic completeness.",
+      "level": 3,
+      "parentId": "skill_physics",
+      "description": "Loss functions enforcing Navier-Stokes, Hamiltonian dynamics, and Keplerian orbital constraints.",
       "position": [
-        5,
-        5,
-        -5
+        6.0,
+        -9.5,
+        -3.5
       ]
     },
     {
-      "id": "phil_hardware_sympathetic",
-      "title": "Hardware-Sympathetic Software",
+      "id": "concept_llm",
+      "title": "Large Language Models",
       "type": "skill",
-      "level": 2,
-      "parentId": "core",
-      "description": "The philosophy of treating software as a physical constraint acting upon silicon. Every architectural decision is guided by memory alignment and throughput.",
+      "level": 3,
+      "parentId": "skill_ai",
+      "description": "Attention mechanisms, KV-cache management, Rotary Positional Embeddings, and token economics.",
       "position": [
-        -5,
-        5,
-        5
+        12.5,
+        -0.5,
+        -8.0
       ]
     },
     {
-      "id": "phil_top_down",
-      "title": "Top-Down Cognitive Architecture",
+      "id": "concept_rag",
+      "title": "Context & RAG Architecture",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_ai",
+      "description": "Dense vector embeddings, cross-encoder rerankers, semantic gating, and sparse-dense hybrid retrieval.",
+      "position": [
+        10.5,
+        1.0,
+        -8.5
+      ]
+    },
+    {
+      "id": "concept_react",
+      "title": "React 19 & Next.js 16",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_web",
+      "description": "Server components, streaming SSR, edge functions, and fine-grained state management with Zustand.",
+      "position": [
+        7.5,
+        -8.0,
+        -7.5
+      ]
+    },
+    {
+      "id": "concept_three",
+      "title": "Three.js & WebGL Shaders",
+      "type": "skill",
+      "level": 3,
+      "parentId": "skill_web",
+      "description": "3D spatial scene graphs, instanced meshes, custom GLSL fragment shaders, and procedural particle systems.",
+      "position": [
+        5.0,
+        -8.5,
+        -7.0
+      ]
+    },
+    {
+      "id": "edu_btech",
+      "title": "B.Tech Computer Science",
       "type": "skill",
       "level": 2,
-      "parentId": "core",
-      "description": "Macro-to-micro systems thinking. Identifying structural hardware limits before descending into algorithmic logic and implementation details.",
+      "parentId": "cat_edu",
+      "description": "Chandigarh University (2025\u20132029). Coursework: High-Performance Computing, Low-Level Systems, Database Architecture, Parallel Computing. CGPA: 6.98.",
       "position": [
-        5,
-        -5,
-        5
+        7.0,
+        7.5,
+        4.5
+      ]
+    },
+    {
+      "id": "edu_uni",
+      "title": "Chandigarh University",
+      "type": "skill",
+      "level": 2,
+      "parentId": "cat_edu",
+      "description": "Mohali, Punjab, India. Institutional research hub for systems engineering, IEEE conference papers, and departmental initiatives.",
+      "position": [
+        5.0,
+        9.0,
+        6.0
+      ]
+    },
+    {
+      "id": "exp_dsr",
+      "title": "Former Student Representative",
+      "type": "skill",
+      "level": 2,
+      "parentId": "cat_edu",
+      "description": "Department Student Representative (Tenure: Oct 2025 \u2013 Sep 2026). Represented 400+ computer science students, liaised with faculty, managed academic conflict resolution, and organized tech initiatives.",
+      "position": [
+        9.0,
+        5.5,
+        6.0
+      ]
+    },
+    {
+      "id": "award_ev",
+      "title": "Emergent Ventures Grantee",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_exp",
+      "description": "Awarded $5,500 grant from Emergent Ventures (founded by Tyler Cowen / Mercatus Center) for pioneering independent research in physics-constrained machine learning and astronomy data pipelines.",
+      "position": [
+        -4.5,
+        -8.5,
+        -5.5
+      ],
+      "links": [
+        {
+          "label": "EV_GRANT",
+          "url": "https://tars.earth"
+        }
+      ]
+    },
+    {
+      "id": "award_ieee",
+      "title": "IEEE CCNCPS Best Paper Award",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_exp",
+      "description": "Best Student Paper Award & Session Chair designation at IEEE CCNCPS 2026 Dubai for the FieldChain GPU storage integrity architecture.",
+      "position": [
+        -6.5,
+        -6.5,
+        -7.0
+      ]
+    },
+    {
+      "id": "award_cu_research",
+      "title": "CU Research Excellence Award",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_exp",
+      "description": "University research grant of $1,500 supporting laboratory hardware, high-end compute equipment, and GPU benchmarking clusters.",
+      "position": [
+        -2.5,
+        -8.0,
+        -7.5
+      ]
+    },
+    {
+      "id": "proj_opensource",
+      "title": "Upstream Open Source (CNCF & Apache)",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_exp",
+      "description": "Merged pull requests across CNCF OpenTelemetry (#449), Apache Fineract (#703, #688), Red Hat Cockpit (#23800), and OpenSearch Dashboards (#12879, #12880).",
+      "position": [
+        -5.0,
+        -4.0,
+        -8.5
+      ],
+      "links": [
+        {
+          "label": "PR_TRACKER",
+          "url": "https://github.com/rk-roshan-kr"
+        }
+      ]
+    },
+    {
+      "id": "exp_lt",
+      "title": "L3 IT Intern (SMG Scooters)",
+      "type": "project",
+      "level": 2,
+      "parentId": "cat_exp",
+      "description": "Enterprise IT & systems optimization intern (Dec 2025 \u2013 Jan 2026). Engineered internal CRM portal, optimized inventory databases, and automated logistics workflows.",
+      "position": [
+        -0.5,
+        -7.0,
+        -6.0
       ]
     }
   ],
   "edges": [
     {
-      "source": "cat_edu",
-      "target": "core",
-      "opacity": 0.3
+      "source": "core",
+      "target": "cat_startup",
+      "opacity": 0.9
     },
     {
-      "source": "cat_exp",
-      "target": "core",
-      "opacity": 0.3
+      "source": "core",
+      "target": "cat_proj",
+      "opacity": 0.9
+    },
+    {
+      "source": "core",
+      "target": "cat_skills",
+      "opacity": 0.9
+    },
+    {
+      "source": "core",
+      "target": "cat_edu",
+      "opacity": 0.9
+    },
+    {
+      "source": "core",
+      "target": "cat_exp",
+      "opacity": 0.9
+    },
+    {
+      "source": "cat_startup",
+      "target": "startup_earthoslab",
+      "opacity": 0.9
+    },
+    {
+      "source": "startup_earthoslab",
+      "target": "proj_earthos",
+      "opacity": 0.85
+    },
+    {
+      "source": "startup_earthoslab",
+      "target": "arch_synapse",
+      "opacity": 0.85
+    },
+    {
+      "source": "startup_earthoslab",
+      "target": "book_agi_question",
+      "opacity": 0.9
+    },
+    {
+      "source": "book_agi_question",
+      "target": "arch_synapse",
+      "opacity": 0.6
+    },
+    {
+      "source": "book_agi_question",
+      "target": "proj_earthos",
+      "opacity": 0.6
+    },
+    {
+      "source": "book_agi_question",
+      "target": "book_ch01",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_ch01",
+      "target": "arch_synapse",
+      "opacity": 0.45
+    },
+    {
+      "source": "book_agi_question",
+      "target": "book_ch02",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_agi_question",
+      "target": "book_ch03",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_agi_question",
+      "target": "book_ch04",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_agi_question",
+      "target": "book_ch05",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_ch05",
+      "target": "arch_synapse",
+      "opacity": 0.45
+    },
+    {
+      "source": "book_agi_question",
+      "target": "book_ch06",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_agi_question",
+      "target": "book_ch07",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_ch07",
+      "target": "arch_synapse",
+      "opacity": 0.45
+    },
+    {
+      "source": "book_agi_question",
+      "target": "book_ch08",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_agi_question",
+      "target": "book_ch09",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_agi_question",
+      "target": "book_ch10",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_ch10",
+      "target": "arch_synapse",
+      "opacity": 0.45
+    },
+    {
+      "source": "book_agi_question",
+      "target": "book_ch11",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_agi_question",
+      "target": "book_ch12",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_agi_question",
+      "target": "book_ch13",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_ch13",
+      "target": "arch_synapse",
+      "opacity": 0.45
+    },
+    {
+      "source": "book_agi_question",
+      "target": "book_ch14",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_ch14",
+      "target": "arch_synapse",
+      "opacity": 0.45
+    },
+    {
+      "source": "arch_synapse",
+      "target": "concept_somatic_markers",
+      "opacity": 0.7
+    },
+    {
+      "source": "book_ch10",
+      "target": "concept_somatic_markers",
+      "opacity": 0.8
+    },
+    {
+      "source": "concept_somatic_markers",
+      "target": "concept_elliot_paradox",
+      "opacity": 0.8
+    },
+    {
+      "source": "book_ch10",
+      "target": "concept_elliot_paradox",
+      "opacity": 0.75
+    },
+    {
+      "source": "arch_synapse",
+      "target": "concept_membrane",
+      "opacity": 0.8
+    },
+    {
+      "source": "book_ch13",
+      "target": "concept_membrane",
+      "opacity": 0.8
+    },
+    {
+      "source": "arch_synapse",
+      "target": "concept_representation_darwinism",
+      "opacity": 0.8
+    },
+    {
+      "source": "concept_membrane",
+      "target": "concept_representation_darwinism",
+      "opacity": 0.7
+    },
+    {
+      "source": "arch_synapse",
+      "target": "concept_homeostasis",
+      "opacity": 0.7
+    },
+    {
+      "source": "book_ch07",
+      "target": "concept_homeostasis",
+      "opacity": 0.75
+    },
+    {
+      "source": "arch_synapse",
+      "target": "concept_metacognition",
+      "opacity": 0.7
+    },
+    {
+      "source": "book_ch03",
+      "target": "concept_metacognition",
+      "opacity": 0.75
+    },
+    {
+      "source": "arch_synapse",
+      "target": "concept_episodic_memory",
+      "opacity": 0.7
+    },
+    {
+      "source": "book_ch02",
+      "target": "concept_episodic_memory",
+      "opacity": 0.75
+    },
+    {
+      "source": "arch_synapse",
+      "target": "concept_counterfactuals",
+      "opacity": 0.7
+    },
+    {
+      "source": "book_ch06",
+      "target": "concept_counterfactuals",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_ch04",
+      "target": "concept_epistemic_grounding",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_ch08",
+      "target": "concept_executive_attention",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_ch09",
+      "target": "concept_hierarchical_agency",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_ch11",
+      "target": "concept_error_monitoring",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_ch12",
+      "target": "concept_synaptic_consolidation",
+      "opacity": 0.75
+    },
+    {
+      "source": "book_ch14",
+      "target": "concept_synthetic_consciousness",
+      "opacity": 0.8
+    },
+    {
+      "source": "arch_synapse",
+      "target": "concept_synthetic_consciousness",
+      "opacity": 0.75
     },
     {
       "source": "cat_proj",
-      "target": "core",
-      "opacity": 0.3
+      "target": "proj_fieldchain",
+      "opacity": 0.85
+    },
+    {
+      "source": "cat_proj",
+      "target": "proj_writrieve",
+      "opacity": 0.85
+    },
+    {
+      "source": "cat_proj",
+      "target": "proj_tars",
+      "opacity": 0.85
+    },
+    {
+      "source": "cat_proj",
+      "target": "proj_navisense",
+      "opacity": 0.85
+    },
+    {
+      "source": "cat_proj",
+      "target": "proj_modelvm",
+      "opacity": 0.85
+    },
+    {
+      "source": "cat_proj",
+      "target": "proj_patentzero",
+      "opacity": 0.8
+    },
+    {
+      "source": "cat_proj",
+      "target": "proj_worldring",
+      "opacity": 0.8
+    },
+    {
+      "source": "cat_proj",
+      "target": "proj_cryptic",
+      "opacity": 0.8
+    },
+    {
+      "source": "cat_proj",
+      "target": "proj_hsastar",
+      "opacity": 0.75
+    },
+    {
+      "source": "cat_proj",
+      "target": "proj_safety",
+      "opacity": 0.75
+    },
+    {
+      "source": "cat_proj",
+      "target": "proj_trash2cash",
+      "opacity": 0.75
+    },
+    {
+      "source": "cat_proj",
+      "target": "proj_roshan_arch",
+      "opacity": 0.75
     },
     {
       "source": "cat_skills",
-      "target": "core",
-      "opacity": 0.3
+      "target": "skill_sys",
+      "opacity": 0.85
     },
     {
-      "source": "proj_fieldchain",
-      "target": "cat_proj",
-      "opacity": 0.2
+      "source": "cat_skills",
+      "target": "skill_physics",
+      "opacity": 0.85
     },
     {
-      "source": "proj_roshan_arch",
-      "target": "cat_proj",
-      "opacity": 0.2
+      "source": "cat_skills",
+      "target": "skill_ai",
+      "opacity": 0.85
     },
     {
-      "source": "proj_tars",
-      "target": "cat_proj",
-      "opacity": 0.2
-    },
-    {
-      "source": "proj_quanta",
-      "target": "cat_proj",
-      "opacity": 0.2
-    },
-    {
-      "source": "proj_cryptic",
-      "target": "cat_proj",
-      "opacity": 0.2
-    },
-    {
-      "source": "proj_safety",
-      "target": "cat_proj",
-      "opacity": 0.2
+      "source": "cat_skills",
+      "target": "skill_web",
+      "opacity": 0.85
     },
     {
       "source": "skill_sys",
-      "target": "cat_skills",
-      "opacity": 0.2
-    },
-    {
-      "source": "skill_physics",
-      "target": "cat_skills",
-      "opacity": 0.2
-    },
-    {
-      "source": "skill_ai",
-      "target": "cat_skills",
-      "opacity": 0.2
-    },
-    {
-      "source": "skill_web",
-      "target": "cat_skills",
-      "opacity": 0.2
-    },
-    {
-      "source": "edu_btech",
-      "target": "cat_edu",
-      "opacity": 0.2
-    },
-    {
-      "source": "edu_uni",
-      "target": "cat_edu",
-      "opacity": 0.2
-    },
-    {
-      "source": "exp_lt",
-      "target": "cat_exp",
-      "opacity": 0.2
-    },
-    {
-      "source": "award_ev",
-      "target": "cat_exp",
-      "opacity": 0.2
-    },
-    {
-      "source": "concept_cuda",
-      "target": "proj_fieldchain",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_pcie",
-      "target": "proj_fieldchain",
-      "opacity": 0.08
-    },
-    {
-      "source": "sys_memory",
-      "target": "proj_roshan_arch",
-      "opacity": 0.08
-    },
-    {
-      "source": "sys_deterministic",
-      "target": "proj_roshan_arch",
-      "opacity": 0.08
-    },
-    {
-      "source": "data_tess",
-      "target": "proj_tars",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_exoplanet",
-      "target": "proj_tars",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_simd",
-      "target": "skill_sys",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_warp",
-      "target": "skill_sys",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_cpp",
-      "target": "skill_sys",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_vulkan",
-      "target": "skill_sys",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_pytorch",
-      "target": "skill_physics",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_tensors",
-      "target": "skill_physics",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_backprop",
-      "target": "skill_physics",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_pinns",
-      "target": "skill_physics",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_llm",
-      "target": "skill_ai",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_rag",
-      "target": "skill_ai",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_vector",
-      "target": "skill_ai",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_react",
-      "target": "skill_web",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_webgl",
-      "target": "skill_web",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_three",
-      "target": "skill_web",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_gf_math",
-      "target": "proj_fieldchain",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_eea",
-      "target": "proj_tars",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_echo",
-      "target": "proj_tars",
-      "opacity": 0.08
-    },
-    {
-      "source": "concept_sff",
-      "target": "proj_roshan_arch",
-      "opacity": 0.08
-    },
-    {
-      "source": "proj_hsastar",
-      "target": "cat_proj",
-      "opacity": 0.2
-    },
-    {
-      "source": "concept_geometric_loss",
-      "target": "skill_physics",
-      "opacity": 0.08
+      "target": "concept_cuda",
+      "opacity": 0.7
     },
     {
       "source": "proj_fieldchain",
       "target": "concept_cuda",
-      "opacity": 0.1
+      "opacity": 0.6
+    },
+    {
+      "source": "skill_sys",
+      "target": "concept_vulkan",
+      "opacity": 0.7
     },
     {
       "source": "proj_fieldchain",
       "target": "concept_vulkan",
-      "opacity": 0.1
+      "opacity": 0.8
     },
     {
-      "source": "proj_tars",
-      "target": "skill_physics",
-      "opacity": 0.15
+      "source": "skill_sys",
+      "target": "concept_cpp",
+      "opacity": 0.7
     },
     {
-      "source": "proj_tars",
+      "source": "skill_sys",
+      "target": "concept_simd",
+      "opacity": 0.6
+    },
+    {
+      "source": "skill_sys",
+      "target": "sys_memory",
+      "opacity": 0.7
+    },
+    {
+      "source": "proj_modelvm",
+      "target": "sys_memory",
+      "opacity": 0.75
+    },
+    {
+      "source": "skill_sys",
+      "target": "sys_deterministic",
+      "opacity": 0.7
+    },
+    {
+      "source": "skill_physics",
       "target": "concept_pytorch",
-      "opacity": 0.1
+      "opacity": 0.7
     },
     {
-      "source": "proj_quanta",
-      "target": "skill_physics",
-      "opacity": 0.1
+      "source": "skill_physics",
+      "target": "concept_pinns",
+      "opacity": 0.7
     },
     {
-      "source": "proj_roshan_arch",
+      "source": "proj_tars",
+      "target": "concept_pinns",
+      "opacity": 0.7
+    },
+    {
+      "source": "skill_ai",
+      "target": "concept_llm",
+      "opacity": 0.7
+    },
+    {
+      "source": "skill_ai",
+      "target": "concept_rag",
+      "opacity": 0.7
+    },
+    {
+      "source": "proj_writrieve",
+      "target": "concept_rag",
+      "opacity": 0.75
+    },
+    {
+      "source": "skill_web",
+      "target": "concept_react",
+      "opacity": 0.7
+    },
+    {
+      "source": "proj_earthos",
+      "target": "concept_react",
+      "opacity": 0.7
+    },
+    {
+      "source": "skill_web",
+      "target": "concept_three",
+      "opacity": 0.7
+    },
+    {
+      "source": "proj_cryptic",
+      "target": "concept_three",
+      "opacity": 0.7
+    },
+    {
+      "source": "cat_edu",
+      "target": "edu_btech",
+      "opacity": 0.85
+    },
+    {
+      "source": "cat_edu",
+      "target": "edu_uni",
+      "opacity": 0.85
+    },
+    {
+      "source": "cat_edu",
+      "target": "exp_dsr",
+      "opacity": 0.8
+    },
+    {
+      "source": "cat_exp",
+      "target": "award_ev",
+      "opacity": 0.85
+    },
+    {
+      "source": "proj_tars",
+      "target": "award_ev",
+      "opacity": 0.75
+    },
+    {
+      "source": "cat_exp",
+      "target": "award_ieee",
+      "opacity": 0.85
+    },
+    {
+      "source": "proj_fieldchain",
+      "target": "award_ieee",
+      "opacity": 0.8
+    },
+    {
+      "source": "cat_exp",
+      "target": "award_cu_research",
+      "opacity": 0.8
+    },
+    {
+      "source": "proj_fieldchain",
+      "target": "award_cu_research",
+      "opacity": 0.6
+    },
+    {
+      "source": "cat_exp",
+      "target": "proj_opensource",
+      "opacity": 0.85
+    },
+    {
+      "source": "cat_exp",
+      "target": "exp_lt",
+      "opacity": 0.8
+    },
+    {
+      "source": "proj_fieldchain",
       "target": "skill_sys",
-      "opacity": 0.15
+      "opacity": 0.6
+    },
+    {
+      "source": "proj_writrieve",
+      "target": "skill_ai",
+      "opacity": 0.6
+    },
+    {
+      "source": "proj_tars",
+      "target": "skill_physics",
+      "opacity": 0.6
+    },
+    {
+      "source": "proj_navisense",
+      "target": "skill_sys",
+      "opacity": 0.5
+    },
+    {
+      "source": "proj_modelvm",
+      "target": "skill_sys",
+      "opacity": 0.6
     },
     {
       "source": "proj_cryptic",
       "target": "skill_web",
-      "opacity": 0.15
+      "opacity": 0.6
     },
     {
-      "source": "proj_hsastar",
-      "target": "skill_sys",
-      "opacity": 0.1
+      "source": "proj_earthos",
+      "target": "skill_web",
+      "opacity": 0.6
     }
   ]
 }

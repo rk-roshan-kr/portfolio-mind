@@ -10,36 +10,58 @@ const papers = [
     id: 'fieldchain',
     title: 'FieldChain: A Wire-Speed Primitive for Energy-Efficient Storage Integrity',
     authors: 'Roshan Kumar Gupta, Garima Thakur',
-    venue: 'USENIX HotStorage \'26 (Submission)',
-    abstract: 'FieldChain achieves a sustained system throughput of 41.28 GiB/s on an NVIDIA RTX 4050, saturating PCIe Gen4 x8 links. By leveraging a custom Vulkan backend, we demonstrate a peak kernel compute capacity of 166.86 GiB/s, proving that cryptographic overhead is effectively zero.',
+    venue: 'IEEE CCNCPS 2026 (Dubai, UAE) — Best Student Paper Award & Session Chair',
+    abstract: 'FieldChain achieves a sustained system throughput of 41.28 GiB/s on an NVIDIA RTX 4050, saturating PCIe Gen4 x8 links. By leveraging a custom Vulkan backend, we demonstrate a peak kernel compute capacity of 166.86 GiB/s, proving that cryptographic overhead is effectively zero. Awarded Best Student Paper at IEEE CCNCPS 2026 in Dubai.',
     links: [
       { label: 'View Report', url: 'https://github.com/rk-roshan-kr/FieldChain' },
       { label: 'GitHub', url: 'https://github.com/rk-roshan-kr/FieldChain', icon: <Github size={14} /> }
     ],
-    tags: ['GPU_ACCELERATION', 'CRYPTOGRAPHY', 'SYSTEMS_STORAGE']
+    tags: ['IEEE_BEST_PAPER', 'GPU_ACCELERATION', 'SYSTEMS_STORAGE', 'VULKAN']
+  },
+  {
+    id: 'modelvm',
+    title: 'ModelVM: Virtualizing Semantic State and Model Residency for Resource-Constrained Language Model Systems',
+    authors: 'Roshan Kumar Gupta',
+    venue: 'Preprint / Working Paper (arXiv Prepared)',
+    abstract: 'Introduces user-space memory virtualization and typed Cognitive State Packets (CSP) for LLM ensembles in resource-constrained environments, achieving deterministic state swapping and zero-copy activation caching.',
+    links: [
+      { label: 'Research Dossier', url: 'https://github.com/rk-roshan-kr' }
+    ],
+    tags: ['LLM_SYSTEMS', 'MEMORY_VIRTUALIZATION', 'COGNITIVE_STATE_PACKETS']
+  },
+  {
+    id: 'agi_question',
+    title: 'The AGI Question: What Does It Take to Become a Mind?',
+    authors: 'Roshan Kumar Gupta',
+    venue: 'Authored Scholarly Monograph (earthos.shop)',
+    abstract: 'A deep, accessible exploration bridging cognitive philosophy, neuroscience, human narratives, and computational substrate principles. Explores what is required for synthetic architectures to manifest subjective experience, paired with the full production digital reader platform.',
+    links: [
+      { label: 'Reader Platform', url: 'https://earthos.shop' }
+    ],
+    tags: ['COGNITIVE_ARCHITECTURE', 'MONOGRAPH', 'PHILOSOPHY_OF_MIND']
   },
   {
     id: 'tars',
     title: 'TARS Core: A Physics-Constrained Machine Learning Pipeline for High-Precision Exoplanet Detection',
     authors: 'Roshan Kumar Gupta, Garima Thakur',
-    venue: 'Research Paper RP2026',
-    abstract: 'We introduce TARS Core, a physics-constrained pipeline prioritizing precision. Using a linear filter cascade with Event Evidence Aggregator (EEA) and ECHO modules, it enforces orbital coherence and shape constraints, achieving 78.6% precision in the TESS two-transit regime.',
+    venue: 'Research Paper RP2026 (Supported by $5,500 Emergent Ventures Grant)',
+    abstract: 'We introduce TARS Core, a physics-constrained pipeline prioritizing precision. Using a linear filter cascade with Event Evidence Aggregator (EEA) and ECHO modules, it enforces orbital coherence and transit depth equations, achieving 70.1% precision in sparse NASA TESS two-transit regimes.',
     links: [
       { label: 'Full Paper', url: 'https://github.com/rk-roshan-kr/Tars' },
       { label: 'Grant Material', url: 'https://github.com/rk-roshan-kr/Tars' }
     ],
-    tags: ['ASTROPHYSICS', 'PHYSICS_ML', 'NASA_TESS']
+    tags: ['EMERGENT_VENTURES', 'ASTROPHYSICS', 'PHYSICS_ML', 'NASA_TESS']
   },
   {
     id: 'quanta',
-    title: 'QUANTA: Signal-to-Noise Limit of Qubits in Quantum Computing',
+    title: 'The Entropic Noise Boundary & Surface-Code Simulations in the Undead Zone',
     authors: 'Roshan Kumar Gupta',
-    venue: 'Theoretical Thesis (Draft)',
-    abstract: 'A research initiative defining an experimental law for the signal-to-noise limit of qubits. This work explores the architectural divergence required to stabilize quantum signals in high-interference environments.',
+    venue: 'Quantum Information Theory (Working Paper)',
+    abstract: 'Derives purity-distinguishability equivalence bounds and Rényi-2 information witnesses for noisy NISQ quantum channels, establishing the separation between global observability and logical correctability using surface-code stabilizer simulations in Stim/PyMatching.',
     links: [
-      { label: 'Thesis Draft', url: '#' }
+      { label: 'Theoretical Draft', url: '#' }
     ],
-    tags: ['QUANTUM_COMPUTING', 'ERROR_CORRECTION', 'SIGNAL_PROCESSING']
+    tags: ['QUANTUM_COMPUTING', 'ERROR_CORRECTION', 'NISQ_HORIZONS', 'STIM']
   }
 ];
 

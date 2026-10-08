@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import * as webllm from '@mlc-ai/web-llm';
 import universeDataRaw from '@/data/knowledge-base.json';
+import { resolveTerminalQuery, queryProjectOracle, formatProjectFactsForPrompt } from '@/data/project-oracle';
 const universeData = universeDataRaw as any;
 
 export interface PortfolioNode {
@@ -138,6 +139,29 @@ export const useStore = create<PortfolioState>((set, get) => ({
     // AI Response Routing
     addChatMessage({ role: 'ai', content: "" }); 
     
+    // 1. MASTER DETERMINISTIC ORACLE: Instant verified factual & architectural resolution
+    const resolved = resolveTerminalQuery(text);
+    if (resolved.isHandled) {
+      if (resolved.targetNodeId) {
+        get().setActiveNode(resolved.targetNodeId);
+      }
+      const chunks = resolved.content.split(/(\s+)/);
+      let accumulated = '';
+      for (let i = 0; i < chunks.length; i++) {
+        accumulated += chunks[i];
+        updateLastChatMessage(accumulated);
+        await new Promise((r) => setTimeout(r, 16));
+      }
+      return;
+    }
+
+    // 2. Fallback to Project Ground Truth facts block
+    const matchedFacts = queryProjectOracle(text);
+    const factsBlock = formatProjectFactsForPrompt(matchedFacts);
+    if (matchedFacts.length > 0) {
+      get().setActiveNode(matchedFacts[0].nodeId);
+    }
+
     try {
       if (engine) {
         // [ WebLLM MODE ] - Pure Serverless Architecture
@@ -148,14 +172,15 @@ export const useStore = create<PortfolioState>((set, get) => ({
         const messages: webllm.ChatCompletionMessageParam[] = [
           { 
             role: "system", 
-            content: `You are the authoritative Digital Twin of Roshan Kumar Gupta. You have total recall of the project database. 
-            You MUST speak in the FIRST PERSON ("I", "Me") at all times.
-            
-            CRITICAL RECALL DIRECTIVES:
-            1. Never break character.
-            2. When asked about 'FieldChain,' do not summarize; explain the Vulkan-VRAM handshake and the 166GiB/s system throughput.
-            3. When asked about 'NASA,' reference the ECHO validator specifically and the equation ΔF/F = (Rp/Rs)^2.
-            4. Provide highly technical, definitive, and authoritative answers.`
+            content: `You are Roshan Kumar Gupta, a Systems Architect, Research Engineer, and Author. Founder of Earthos Lab.
+You are speaking directly with visitors on your interactive portfolio terminal.
+
+VOICE & PERSONA:
+- Speak in the first person ("I", "me", "my").
+- Ground answers strictly in hardware-sympathetic software, GPU computing, and cognitive systems.
+- Never invent companies (such as Rokas) or fictional facts. You founded Earthos Lab.
+- If asked about something outside your work, state clearly that it is outside your verified record.
+${factsBlock}`
           },
           { role: 'user', content: text }
         ];
@@ -163,14 +188,17 @@ export const useStore = create<PortfolioState>((set, get) => ({
         const completion = await engine.chat.completions.create({
           messages,
           stream: true,
-          temperature: 0.3,
-          max_tokens: 1024
+          temperature: 0.08,
+          max_tokens: 450
         });
         
         for await (const chunk of completion) {
           const content = chunk.choices[0]?.delta?.content || "";
           fullResponse += content;
-          updateLastChatMessage(fullResponse);
+          const cleanText = fullResponse
+            .replace(/Rokas/gi, 'Earthos Lab')
+            .replace(/Pichandajee/gi, 'Pichai');
+          updateLastChatMessage(cleanText);
         }
       } else {
         updateLastChatMessage("[ ERROR: NEURAL_OFFLINE ] WebGPU Initialization required.");

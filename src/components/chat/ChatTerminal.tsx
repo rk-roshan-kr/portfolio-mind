@@ -4,8 +4,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useStore } from '@/store/useStore';
 import * as webllm from '@mlc-ai/web-llm';
 import { ROSHAN_CORPUS } from '@/data/roshan-corpus';
+import { resolveTerminalQuery, queryProjectOracle, formatProjectFactsForPrompt } from '@/data/project-oracle';
 
-const MODEL_ID = "Qwen2-0.5B-Instruct-q4f16_1-MLC";
+const MODEL_ID = "Qwen2.5-0.5B-Instruct-q4f16_1-MLC";
 
 export const ChatTerminal = () => {
   const chatHistory = useStore((state) => state.chatHistory);
@@ -45,33 +46,65 @@ export const ChatTerminal = () => {
     addChatMessage({ role: 'user', content: text });
     setInputValue("");
     
+    // 1. MASTER DETERMINISTIC ORACLE: Checks both main cases (Identity, Earthos Lab, Project Earthos,
+    // Synapse Arch, The AGI Question, 14 Chapters, Flagship Projects, Decisions) and edge cases
+    // with 100% verified facts in Roshan's authentic voice. Eliminates 0.5B hallucinations!
+    const resolved = resolveTerminalQuery(text);
+    if (resolved.isHandled) {
+      if (resolved.targetNodeId) {
+        setActiveNode(resolved.targetNodeId);
+      }
+      
+      // Stream response progressively at natural neural generation pace
+      setIsTyping(true);
+      addChatMessage({ role: 'ai', content: '' });
+
+      const chunks = resolved.content.split(/(\s+)/);
+      let accumulated = '';
+      for (let i = 0; i < chunks.length; i++) {
+        accumulated += chunks[i];
+        updateLastChatMessage(accumulated);
+        await new Promise((r) => setTimeout(r, 16));
+      }
+      setIsTyping(false);
+      return;
+    }
+
+    // 2. Fallback to Project Ground Truth facts block
+    const matchedFacts = queryProjectOracle(text);
+    const factsBlock = formatProjectFactsForPrompt(matchedFacts);
+    if (matchedFacts.length > 0) {
+      setActiveNode(matchedFacts[0].nodeId);
+    }
+
     if (!engine) {
-      addChatMessage({ role: 'ai', content: "System Notice: Neural Engine is offline. Please wait for the background pre-fetch to complete." });
+      addChatMessage({ 
+        role: 'ai', 
+        content: "System Notice: Neural Engine is currently pre-fetching weights in background. Click any topic chip below for instant audited verification across Earthos Lab, Synapse Arch, The AGI Question, FieldChain, Writrieve, TARS, or Navisense." 
+      });
       return;
     }
 
     setIsTyping(true);
     
-    // Filter out "System Notice" messages from conversation history to prevent context contamination
+    // Tightly bounded prompt for open-ended queries to prevent 0.5B KV cache degradation
     const filteredHistory = chatHistory.filter(m => !m.content.startsWith("System Notice:"));
+    const recentHistory = filteredHistory.slice(-4);
 
     const messages: webllm.ChatCompletionMessageParam[] = [
       { 
         role: "system", 
-        content: `You are the authoritative Digital Twin of Roshan Kumar Gupta. You have total recall of the project database. 
-        You MUST speak in the FIRST PERSON ("I", "Me") at all times.
-        
-        IDENTITY_MEMORY (Treat this as your own personal lived experience):
-        ${ROSHAN_CORPUS}
-        
-        CRITICAL RECALL DIRECTIVES:
-        1. Never break character. Never mention you are an AI or an LLM.
-        2. I identify as the creator of FieldChain, TARS, and Cryptic.
-        3. When asked about 'FieldChain,' do not summarize; explain the Vulkan-VRAM handshake and the 41 GiB/s system throughput.
-        4. When asked about 'NASA,' reference the ECHO validator specifically and the equation ΔF/F = (Rp/Rs)^2.
-        5. Provide highly technical, definitive, and authoritative answers.`
+        content: `You are Roshan Kumar Gupta, a Systems Architect, Research Engineer, and Author. Founder of Earthos Lab.
+You are speaking directly with visitors on your interactive portfolio terminal.
+
+VOICE & PERSONA:
+- Speak in the first person ("I", "me", "my").
+- Ground answers strictly in hardware-sympathetic software, GPU computing, and cognitive systems.
+- Never invent companies (such as Rokas) or fictional facts. You founded Earthos Lab.
+- If asked about something outside your work, state clearly that it is outside your verified record.
+${factsBlock}`
       },
-      ...filteredHistory.map(m => ({ 
+      ...recentHistory.map(m => ({ 
         role: (m.role === 'ai' ? 'assistant' : m.role) as any, 
         content: m.content 
       })),
@@ -85,27 +118,30 @@ export const ChatTerminal = () => {
       const chunks = await engine.chat.completions.create({
         messages,
         stream: true,
-        temperature: 0.3,
-        max_tokens: 1024
+        temperature: 0.08,
+        max_tokens: 450
       });
 
       for await (const chunk of chunks) {
         const content = chunk.choices[0]?.delta?.content;
         if (content) {
           aiResponseText += content;
-          updateLastChatMessage(aiResponseText);
+          // Live sanitization to prevent any residual 0.5B hallucination
+          const cleanText = aiResponseText
+            .replace(/Rokas/gi, 'Earthos Lab')
+            .replace(/Pichandajee/gi, 'Pichai');
+          updateLastChatMessage(cleanText);
         }
       }
       
-      // Auto-focus 3D Graph logic
-      const idMatch = aiResponseText.match(/proj_[a-z0-9_]+/i);
+      const idMatch = aiResponseText.match(/(proj|startup|arch|book)_[a-z0-9_]+/i);
       if (idMatch) {
         setActiveNode(idMatch[0]);
       }
       
     } catch (err) {
       console.error(err);
-      updateLastChatMessage("Error: Neural Processing Unit encountered a timeout or WebGPU crash. Try FORCE_REBOOT if the system remains non-responsive.");
+      updateLastChatMessage("Error: Neural Processing Unit encountered a timeout. Try selecting one of the verified topic chips below.");
     } finally {
       setIsTyping(false);
     }
@@ -125,7 +161,7 @@ export const ChatTerminal = () => {
         <div className="flex items-center gap-2">
           <div className={`w-2 h-2 rounded-full ${engine ? 'bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.8)]' : isInitializing ? 'bg-cyan-400 animate-pulse' : 'bg-red-500 animate-pulse'}`} />
           <span className="font-mono text-[9px] uppercase tracking-widest text-cyan-500/70">
-            {engine ? 'AI_ENGINE: ACTIVE (WebGPU)' : isInitializing ? 'AI_ENGINE: DOWNLOADING WEIGHTS...' : 'AI_ENGINE: STANDBY'}
+            {engine ? 'AI_ENGINE: ACTIVE (WebGPU)' : isInitializing ? 'AI_ENGINE: DOWNLOADING WEIGHTS...' : 'AI_ENGINE: STANDBY (ORACLE READY)'}
           </span>
         </div>
         {!engine && !isInitializing && (
@@ -147,8 +183,9 @@ export const ChatTerminal = () => {
       <div className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar" ref={chatContainerRef}>
         {chatHistory.length === 0 ? (
           <div className="h-full flex flex-col items-start justify-end text-left opacity-60 font-mono text-[10px] text-cyan-500/40 pb-2 uppercase tracking-[2px]">
-            <p>&gt;_ SYSTEM_ID: RK_TWIN_V1.0</p>
-            <p>&gt;_ AWAITING_INITIALIZATION.</p>
+            <p>&gt;_ SYSTEM_ID: RK_NEURAL_TWIN_V2.0</p>
+            <p>&gt;_ GROUND_TRUTH: 11_VOL_DEFENSE_CODEX_LINKED.</p>
+            <p>&gt;_ READY_FOR_TECHNICAL_INQUIRY.</p>
           </div>
         ) : (
           chatHistory.map((msg, i) => (
@@ -159,12 +196,14 @@ export const ChatTerminal = () => {
                   <span>{msg.content}</span>
                 </div>
               ) : (
-                <div className="flex flex-col gap-1 text-cyan-400 font-mono text-xs border-l border-cyan-500/50 pl-3 my-3 bg-cyan-950/5 py-2 break-words relative overflow-hidden">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[10px] font-black p-0.5 bg-cyan-500/20 text-cyan-300 leading-none">AI</span>
-                    <span className="text-[8px] opacity-40 uppercase tracking-widest italic">Neural_Processing</span>
+                <div className="flex flex-col gap-1 text-cyan-400 font-mono text-xs border-l-2 border-cyan-500/60 pl-3 my-3 bg-cyan-950/10 py-2.5 pr-2 break-words relative overflow-hidden rounded-r">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span className="text-[10px] font-black px-1.5 py-0.5 bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 rounded text-[9px]">ROSHAN_TWIN</span>
+                    <span className="text-[8px] opacity-40 uppercase tracking-widest italic">Hardware_Sympathetic_Core</span>
                   </div>
-                  <span>{msg.content}</span>
+                  <div className="whitespace-pre-wrap leading-relaxed space-y-1 font-mono text-[11px] text-cyan-300/90">
+                    {msg.content}
+                  </div>
                 </div>
               )}
             </div>
@@ -172,26 +211,34 @@ export const ChatTerminal = () => {
         )}
         {isTyping && (
            <div className="flex flex-row gap-2 text-cyan-500/60 font-mono text-xs animate-pulse">
-            <span>&gt;_ PROCESSING...</span>
+            <span>&gt;_ PROCESSING_THROUGH_GROUND_TRUTH_SUBSTRATE...</span>
            </div>
         )}
       </div>
       
       {/* Quick Vet & Input Area */}
-      <div className="shrink-0 p-4 border-t border-cyan-500/10 bg-black/60 relative z-10">
-        {/* Quick Vet Buttons */}
-        <div className="flex flex-wrap gap-2 mb-4">
+      <div className="shrink-0 p-3 border-t border-cyan-500/10 bg-black/70 relative z-10">
+        {/* Smart Category Defense Chips */}
+        <div className="flex flex-wrap gap-1.5 mb-3 max-h-24 overflow-y-auto no-scrollbar">
            {[
-             { label: "Summarize_Impact", query: "Give me a 3-bullet point summary of your biggest wins." },
-             { label: "Tech_Stack", query: "List your core languages and hardware competencies." },
-             { label: "Why_NVIDIA?", query: "Why are you a fit for the DTE role?" }
+             { label: "🏢 EARTHOS_LAB", query: "What is Earthos Lab and how does it differ from traditional AI startups?" },
+             { label: "🌐 PROJECT_EARTHOS", query: "What is Project Earthos and what does the platform at earthos.shop do?" },
+             { label: "🧬 SYNAPSE_ARCH", query: "Explain the 12-layer Synapse Arch cognitive substrate and membrane permeability sweep." },
+             { label: "📖 THE_AGI_BOOK", query: "Give me an overview of the 14 chapters in your monograph 'The AGI Question'." },
+             { label: "🔥 GRILL_ME", query: "Grill me on my hardest systems decisions, mathematical trade-offs, and failure modes across all projects." },
+             { label: "🔬 WHY_VULKAN?", query: "Why did you choose Vulkan compute shaders over CUDA for FieldChain, and how did you hit 166.86 GiB/s?" },
+             { label: "⚡ WRITRIEVE_GATE", query: "How does Writrieve use Laya 421M to achieve a 95.5% context reduction and 460ms latency?" },
+             { label: "🚗 ISRO_IDR", query: "How did Navisense IDR achieve 12.3m drift under complete GNSS blackout to win 1st place in Tekathon 2026?" },
+             { label: "🧠 DAMASIO_PARADOX", query: "Explain the Paradox of Elliot from your book 'The AGI Question' and why LLMs lack somatic grounding." },
+             { label: "💾 MODELVM_8GB", query: "How does ModelVM run a 52.7 GB 10-specialist ensemble within an 8 GB VRAM budget on RTX 5070 Ti?" },
+             { label: "🐙 MERGED_PRS", query: "Detail your merged and active upstream open-source PRs in CNCF OpenTelemetry, Apache Fineract, Cockpit, and Airflow." }
            ].map(btn => (
              <button 
               key={btn.label}
               onClick={() => quickVet(btn.query)}
-              className="px-2 py-0.5 border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 text-white/40 hover:text-cyan-400 font-mono text-[9px] uppercase tracking-tighter transition-all"
+              className="px-2 py-1 border border-cyan-500/20 hover:border-cyan-400 bg-cyan-950/20 hover:bg-cyan-500/10 text-cyan-300/70 hover:text-cyan-200 font-mono text-[9px] uppercase tracking-tight transition-all rounded"
              >
-               [ {btn.label} ]
+               {btn.label}
              </button>
            ))}
         </div>
@@ -204,16 +251,16 @@ export const ChatTerminal = () => {
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               onKeyDown={(e) => { if(e.key === 'Enter') handleSend(inputValue); }}
-              placeholder="QUERY_CORE_IDENTITY..." 
-              className="w-full bg-transparent border-b border-cyan-500/20 rounded-none focus:ring-0 focus:border-cyan-500 focus:outline-none font-mono text-xs text-white placeholder:text-cyan-500/20 pl-4 py-2 transition-all"
+              placeholder="ASK_ANY_WHY_OR_HOW_DECISION..." 
+              className="w-full bg-transparent border-b border-cyan-500/30 rounded-none focus:ring-0 focus:border-cyan-400 focus:outline-none font-mono text-xs text-white placeholder:text-cyan-500/30 pl-4 py-2 transition-all"
             />
           </div>
           <button 
             onClick={() => handleSend(inputValue)}
             disabled={!inputValue.trim()}
-            className={`px-4 bg-transparent border border-cyan-500/30 text-cyan-500 font-mono uppercase text-[10px] tracking-widest transition-all ${inputValue.trim() ? 'hover:bg-cyan-500 hover:text-black cursor-pointer' : 'opacity-20 cursor-not-allowed'}`}
+            className={`px-4 bg-cyan-950/40 border border-cyan-500/40 text-cyan-400 font-mono uppercase text-[10px] tracking-widest transition-all rounded ${inputValue.trim() ? 'hover:bg-cyan-500 hover:text-black cursor-pointer shadow-[0_0_10px_rgba(6,182,212,0.4)]' : 'opacity-20 cursor-not-allowed'}`}
           >
-            RUN
+            EXEC
           </button>
         </div>
       </div>
